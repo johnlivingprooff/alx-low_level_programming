@@ -19,10 +19,10 @@
 			putchar(',');
 			putchar(' ');
 
-			n++
+			n++;
 		}
 
-		i++
+		i++;
 	}
 
 	putchar('\n');
