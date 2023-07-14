@@ -10,7 +10,7 @@
 
 	for (; i < 10; i++)
 	{
-		putchar("%d", i);
+		putchar('0' + i);
 	}
 
 	putchar('\n');
