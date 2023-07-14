@@ -13,7 +13,7 @@
 		putchar(i);
 	}
 
-		putchar(10);
+		putchar('\n');
 
 	return (0);
 }
