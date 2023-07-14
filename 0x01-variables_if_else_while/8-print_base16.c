@@ -12,7 +12,7 @@
 	{
 		putchar('0' + i);
 	}
-	for (i = 0; 10 <= i < 17; i++)
+	for (i = 10; i < 17; i++)
 	{
 		putchar(65 + i);
 	}
