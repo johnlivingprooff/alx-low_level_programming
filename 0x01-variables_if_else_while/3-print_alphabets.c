@@ -14,7 +14,7 @@
 	{
 		lowerCase[i] = 'a' + i;
 		putchar(lowerCase[i]);
-		upperCase[i] = 'A' + i
+		upperCase[i] = 'A' + i;
 		putchar(upperCase[i]);
 	}
 
