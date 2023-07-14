@@ -14,9 +14,13 @@
 	{
 		lowerCase[i] = 'a' + i;
 		putchar(lowerCase[i]);
+	}
+	for (i = 0; i < 26; i++)
+	{
 		upperCase[i] = 'A' + i;
 		putchar(upperCase[i]);
 	}
+
 
 		putchar('\n');
 
