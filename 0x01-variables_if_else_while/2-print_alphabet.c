@@ -12,7 +12,7 @@
 	for (i = 0; i < 26; i++)
 	{
 		lowerCase[i] = 'a' + i;
-		putchar("%c\n"lowerCase[i]);
+		putchar("%c\n", lowerCase[i]);
 	}
 	return (0);
 }
