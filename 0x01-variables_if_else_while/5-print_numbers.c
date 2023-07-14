@@ -10,10 +10,9 @@
 
 	for (; i < 10; i++)
 	{
-		printf(i);
+		printf("%d\n", i);
 	}
 
-		putchar('\n');
 
 	return (0);
 }
