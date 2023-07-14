@@ -16,8 +16,11 @@
 		{
 			putchar('0' + i);
 			putchar('0' + n);
-			putchar(',');
-			putchar(' ');
+			if (n != 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 
 			n++;
 		}
