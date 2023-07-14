@@ -9,13 +9,13 @@
 	int i = 0;
 	int n = 0;
 
-	while (i <= 9)
+	while (i < 9)
 	{
-		n = 0;
+		n = 1;
 		while (n <= 9)
 		{
-			putchar('0' + i);
-			putchar('0' + n);
+			putchar(i + '0');
+			putchar(n + '0');
 			if (n != 9)
 			{
 				putchar(',');
