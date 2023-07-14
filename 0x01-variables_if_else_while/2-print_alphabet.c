@@ -13,6 +13,7 @@
 	{
 		lowerCase[i] = 'a' + i;
 		putchar("%c\n", lowerCase[i]);
+		putchar('\n')
 	}
 	return (0);
 }
