@@ -6,31 +6,22 @@
  *
  */int main(void)
 {
-	int i = 0;
-	int n = 0;
-
-	while (i < 9)
+	int i;
+	int n;
+	
+	for (i = 0; i < 9; i++)
 	{
-		n = 1;
-		while (n <= 9)
+		for (n = 1; n <= 8; n++)
 		{
-			if (i != 1 && n != 1)
-			{
-				putchar(i + '0');
-				putchar(n + '0');
-			}
-			if (n != 9)
+			putchar(i + '0');
+			putchar(n + '0');
+			if (i != 9)
 			{
 				putchar(',');
 				putchar(' ');
 			}
-
-			n++;
 		}
-
-		i++;
 	}
-
 	putchar('\n');
 	return (0);
 }
