@@ -12,9 +12,9 @@
 	{
 		putchar('0' + i);
 	}
-	for (i = 10; i < 17; i++)
+	for (i = 97; i < 103; i++)
 	{
-		putchar(65 + i);
+		putchar(i);
 	}
 
 	putchar('\n');
