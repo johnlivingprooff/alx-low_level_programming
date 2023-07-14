@@ -10,7 +10,7 @@
 
 	for (; i < 10; i++)
 	{
-		put(i);
+		printf(i);
 	}
 
 		putchar('\n');
