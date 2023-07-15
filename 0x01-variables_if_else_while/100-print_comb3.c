@@ -18,7 +18,7 @@
 				putchar(i + '0');
 				putchar(n + '0');
 			}
-			if (i != 9 && i < n)
+			if (i != 9 || i < n)
 			{
 				putchar(',');
 				putchar(' ');
