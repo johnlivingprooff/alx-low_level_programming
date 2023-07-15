@@ -11,7 +11,7 @@
 
 	for (; a <= 99; a++)
 	{
-		while (b <= 99)
+		while (b < 99)
 		{
 			putchar(a / 10 + '0');
 			putchar(a % 10 + '0');
