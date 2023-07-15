@@ -8,6 +8,7 @@
 {
 	int a = 0;
 	int b = 1;
+
 	for (; a <= 99; a++)
 	{
 		while (b <= 99)
