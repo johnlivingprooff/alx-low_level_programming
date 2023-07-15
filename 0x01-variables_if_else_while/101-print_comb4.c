@@ -12,20 +12,17 @@
 
 	for (i = 0; i < 9; i++)
 	{
-		for (n = 1; n < 8; n++)
+		for (n = 1; n <= 8; n++)
 		{
 			for (x = 2; x <= 9; x++)
 			{
-				if (i < n)
+				if (i < n && n < x)
 				{
 					putchar(i + '0');
 					putchar(n + '0');
-				}
-				if (n < x)
-				{
 					putchar(x + '0');
 				}
-				if (i != 9 && n != 9 && x != 9 && i <= n && n <= x)
+				if (i != 9 && n != 9 && x != 9 && i < n && n <= x)
 				{
 					putchar(',');
 					putchar(' ');
