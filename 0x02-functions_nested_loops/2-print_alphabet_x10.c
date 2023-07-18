@@ -8,7 +8,7 @@
 {
 	int i;
 	char l;
-	
+
 	for (i = 0; i < 10; i++)
 	{
 		for (l = 97; l != 123; l++)
