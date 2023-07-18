@@ -16,6 +16,7 @@
 			{
 				printf("%2d, ", prod);
 			}
+			_putchar(10);
 			if ('\n')
 				printf("%2d", prod);
 		}
