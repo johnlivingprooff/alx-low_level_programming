@@ -10,7 +10,8 @@
 {
 	char lCase[26];
 
-	_putchar(print_alphabet(lCase));
+	print_alphabet(lCase);
+
 	_putchar('\n');
 
 	return (0);
