@@ -21,6 +21,7 @@
 			}
 		}
 	}
+	_putchar(10);
 	else
 	{
 		for (i = n; i >= 98; i--)
@@ -31,6 +32,6 @@
 				printf(", ");
 			}
 		}
+		_putchar(10);
 	}
-	_putchar(10);
 }
