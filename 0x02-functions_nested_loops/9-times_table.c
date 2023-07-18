@@ -11,7 +11,10 @@
 	{
 		for (n = 0; n <= 9; n++)
 		{
-			printf("%2d, ", i * n);
+			if (n < 9)
+			{
+				printf("%2d, ", i * n);
+			}
 		}
 		printf("\n");
 	}
