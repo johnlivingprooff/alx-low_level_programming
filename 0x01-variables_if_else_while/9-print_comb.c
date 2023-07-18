@@ -13,7 +13,7 @@
 		putchar('0' + x);
 		if (x != 9)
 		{
-			putchar(',');
+			putchar(44);
 			putchar(' ');
 		}
 	}
