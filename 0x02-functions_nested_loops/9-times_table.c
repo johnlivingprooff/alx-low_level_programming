@@ -13,7 +13,7 @@
 		{
 			prod = i * n;
 			if (n < 9)
-				printf("%2d, ", prod);
+				printf("%3d, ", prod);
 
 			_putchar(10);
 			if ('\n')
