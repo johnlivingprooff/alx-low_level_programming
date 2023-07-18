@@ -7,14 +7,15 @@
 {
 
 	char letters[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	int i;
 
 	if (letters[c] == 97 && letters[c] <= 122)
 	{
-		_putchar(49);
+		i = _putchar('1');
 	}
 	else
 	{
-		_putchar(48);
+		i = _putchar('0');
 	}
-	return (c);
+	return (i);
 }
