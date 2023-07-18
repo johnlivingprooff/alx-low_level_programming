@@ -20,6 +20,7 @@
 				_putchar(' ');
 			}
 		}
+		_putchar(10);
 	}
 	else
 	{
