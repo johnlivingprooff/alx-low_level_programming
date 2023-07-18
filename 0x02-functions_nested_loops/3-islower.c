@@ -13,7 +13,7 @@
 	{
 		i = _putchar('1');
 	}
-	else
+	else if (letters[c] == 65 && letters[c] <= 90)
 	{
 		i = _putchar('0');
 	}
