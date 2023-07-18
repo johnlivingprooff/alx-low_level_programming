@@ -10,7 +10,7 @@
 	{
 		for (n = 0; n <= 9; n++)
 		{
-			prod = i * n; 
+			prod = i * n;
 			if (prod < 10)
 			{
 				_putchar(prod + '0');
@@ -23,7 +23,6 @@
 				_putchar(prod / 10 + '0');
 				_putchar(prod % 10 + '0');
 				_putchar(',');
-				_putchar(' ');
 				_putchar(' ');
 			}
 		}
