@@ -7,7 +7,7 @@
 {
 	int i = x % 10;
 
-	_putchar(i);
+	_putchar('i');
 
 	return (i);
 }
