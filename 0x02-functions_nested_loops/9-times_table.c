@@ -5,7 +5,7 @@
  * Function that prints the last digit of a number.
  */void times_table(void)
 {
-	int i, n, prod;
+	int i, n;
 
 	for (i = 0; i <= 9; i++)
 	{
