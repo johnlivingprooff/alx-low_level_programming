@@ -12,7 +12,8 @@
 		{
 			_putchar(i * n + '0');
 			_putchar(',');
-			_putchar('  ')
+			_putchar(' ');
+			_putchar(' ');
 		}
 		_putchar(10);
 	}
