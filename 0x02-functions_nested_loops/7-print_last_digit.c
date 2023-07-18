@@ -6,9 +6,11 @@
 {
 	int i = (x % 10);
 
+	if (x >= 0)
+	{
 	_putchar(i + '0');
-
-	if (x < 0)
+	}
+	else if (x < 0)
 	{
 		i = i * -1;
 
