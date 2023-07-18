@@ -5,16 +5,18 @@
  * Function that prints the last digit of a number.
  */void times_table(void)
 {
-	int i, n;
+	int i, n, prod;
 
 	for (i = 0; i <= 9; i++)
 	{
 		for (n = 0; n <= 9; n++)
 		{
-			if ('\n' <= 9)
+			prod = i * n;
+			if (n <= 9)
 			{
-				printf("%2d, ", i * n);
+				printf("%2d,", prod);
 			}
+
 		}
 		printf("\n");
 	}
