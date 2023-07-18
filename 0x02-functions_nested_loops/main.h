@@ -2,6 +2,7 @@
 #define MAIN_H
 
 /* The Function prototype to print _putchar */
-char _putchar(char out[]);
+int _putchar(char c);
+void other(char out[]);
 
 #endif

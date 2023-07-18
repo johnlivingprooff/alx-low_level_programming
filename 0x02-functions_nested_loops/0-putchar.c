@@ -1,6 +1,6 @@
+#include "main.h"
 #include <stdio.h>
 
-void _putchar(char out[]); 
 /*
  *
  * main Function - Entry
@@ -13,14 +13,14 @@ void _putchar(char out[]);
 {
 	char result[8];
 
-	_putchar(result);
+	other(result);
 	printf("%s\n", result);
 
 	return (0);
 
 }
 
-void _putchar(char out[]) /* _putchar Function definition */
+void other(char out[]) /* _putchar Function definition */
 {
 	char s[] = "_putchar";
 	int i = 0;
