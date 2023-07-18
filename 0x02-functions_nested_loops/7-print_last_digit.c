@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /*
  * Function that prints the last digit of a number.
  *
@@ -7,7 +8,7 @@
 {
 	int i = x % 10;
 
-	_putchar('i');
+	printf("%d", i);
 
 	return (i);
 }
