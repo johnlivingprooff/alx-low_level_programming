@@ -8,7 +8,9 @@
  *
  */int main(void)
 {
-	_putchar(print_alphabet);
+	char lCase[26];
+
+	_putchar(print_alphabet(lCase));
 	_putchar('\n');
 
 	return (0);
