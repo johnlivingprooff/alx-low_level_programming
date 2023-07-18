@@ -27,5 +27,6 @@
 	for (i = 0; i < 26; i++)
 	{
 		lCase[i] = i + 97;
+		putchar(lCase[i]);
 	}
 }
