@@ -13,7 +13,7 @@
 	{
 		for (i = n; i <= 98; i++)
 		{
-			_putchar(i + '0');
+			printf("%d", i);
 			if (i != 98)
 			{
 				_putchar(',');
@@ -32,4 +32,5 @@
 			}
 		}
 	}
+	_putchar(10);
 }
