@@ -2,7 +2,7 @@
 
 /*
  * Function that prints the last digit of a number.
- */void jack_bauer(void)
+ */void times_table(void)
 {
 	int i, n;
 
