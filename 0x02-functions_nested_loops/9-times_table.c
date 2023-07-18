@@ -13,23 +13,16 @@
 			prod = i * n;
 			if (prod < 10)
 			{
-				_putchar(' ');
 				_putchar(prod + '0');
-				_putchar(',');
-				_putchar(' ');
-
 			}
 			else
 			{
 				_putchar(prod / 10 + '0');
 				_putchar(prod % 10 + '0');
-				_putchar(',');
-				_putchar(' ');
 			}
 			if (n < 9)
 			{
-				if (i * (n + 1) < 10)
-					_putchar(' ');
+				_putchar(',');
 				_putchar(' ');
 
 			}
