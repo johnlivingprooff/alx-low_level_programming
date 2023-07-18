@@ -16,7 +16,7 @@
 			{
 				printf("%2d, ", prod);
 			}
-			if ('\n' <= 9)
+			if ('\n' <= 81)
 				printf("%2d", prod);
 		}
 		printf("\n");
