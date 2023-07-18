@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /*
  * Function that prints the last digit of a number.
@@ -10,24 +11,7 @@
 	{
 		for (n = 0; n <= 9; n++)
 		{
-			prod = i * n;
-			if (prod < 10)
-			{
-				_putchar(prod + '0');
-			}
-			else
-			{
-				_putchar(prod / 10 + '0');
-				_putchar(prod % 10 + '0');
-			}
-			if (n < 9)
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-
-			}
-
+			printf("%2d, ", i * n);
 		}
 		_putchar(10);
 	}
