@@ -16,6 +16,8 @@
 				_putchar(prod + '0');
 				_putchar(',');
 				_putchar(' ');
+				_putchar(' ');
+
 			}
 			else
 			{
