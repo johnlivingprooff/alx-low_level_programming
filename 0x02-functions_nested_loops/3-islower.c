@@ -5,17 +5,12 @@
  *
  */int _islower(int c)
 {
-
-	char letters[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	int i;
-
-	if (letters[c] == 97 && letters[c] <= 122)
+	if (c >= 'a' && c <= 'z')
 	{
-		i = _putchar('1');
+		return (1);
 	}
-	else if (letters[c] == 65 && letters[c] <= 90)
+	else
 	{
-		i = _putchar('0');
+		return (0);
 	}
-	return (i);
 }
