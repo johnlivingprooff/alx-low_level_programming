@@ -12,6 +12,12 @@
 
 	print_alphabet(lCase);
 
+	int i;
+
+	for (i = 0; i < 26; i++)
+	{
+		_putchar(lCase[i]);
+	}
 	_putchar('\n');
 
 	return (0);
@@ -20,14 +26,12 @@
 /*
  * Function that prints lowercase alphabets
  *
- */void print_alphabet(void)
+ */void print_alphabet(char lCase[])
 {
 	int i;
-	char lCase[26];
 
 	for (i = 0; i < 26; i++)
 	{
 		lCase[i] = i + 97;
-		putchar(lCase[i]);
 	}
 }
