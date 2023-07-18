@@ -10,9 +10,9 @@
  * returns 0
  */int main(void)
 {
-	char out = "_putchar";
+	char out[] = "_putchar";
 
-	printf("%c\n", out);
+	printf("%s\n", out);
 
 	return (0);
 
