@@ -20,7 +20,10 @@
 
 }
 
-void other(char out[]) /* _putchar Function definition */
+/*
+ * other Function Definition
+ *
+ */void other(char out[])
 {
 	char s[] = "_putchar";
 	int i = 0;
