@@ -8,7 +8,7 @@
 {
 	int i = x % 10;
 
-	_putchar(i + '0');
+	_putchar(i +- '0');
 
 	return (i);
 }
