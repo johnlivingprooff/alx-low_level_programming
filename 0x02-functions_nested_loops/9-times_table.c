@@ -13,11 +13,11 @@
 			prod = i * n;
 			if (prod < 10)
 			{
+				_putchar(' ');
 				_putchar(prod + '0');
 				_putchar(',');
 				_putchar(' ');
-				_putchar(' ');
-
+				
 			}
 			else
 			{
