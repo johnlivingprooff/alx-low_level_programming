@@ -4,6 +4,6 @@
 /* The Function prototype to print _putchar */
 int _putchar(char c);
 void other(char out[]);
-void print_alphabet(char lCase[]);
+void print_alphabet(void);
 
 #endif

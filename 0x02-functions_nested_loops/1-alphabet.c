@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /*
  * main Function - Entry
@@ -11,7 +12,7 @@
 	char lCase[26];
 	int i;
 
-	print_alphabet(lCase);
+	print_alphabet();
 
 	for (i = 0; i < 26; i++)
 	{
@@ -25,12 +26,13 @@
 /*
  * Function that prints lowercase alphabets
  *
- */void print_alphabet(char lCase[])
+ */void print_alphabet()
 {
-	int i;
+	char l;
 
-	for (i = 0; i < 26; i++)
+	for (l = 97; l <= 122; l++)
 	{
-		lCase[i] = i + 97;
+		putchar(l);
 	}
+	putchar(10);
 }
