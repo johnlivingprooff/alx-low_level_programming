@@ -4,3 +4,9 @@
  * and returns the result.
  *
  */int add(int a, int b)
+{
+	int a, b, add;
+
+	add = a + b;
+	return (add);
+}
