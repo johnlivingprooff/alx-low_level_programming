@@ -3,7 +3,7 @@
 /*
  * function that  checks for lowercase character.
  *
- */int _isalpha(int n)
+ */int print_sign(int n)
 {
 	if (n > 0)
 	{
