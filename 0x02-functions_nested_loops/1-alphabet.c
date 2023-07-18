@@ -9,10 +9,9 @@
  */int main(void)
 {
 	char lCase[26];
+	int i;
 
 	print_alphabet(lCase);
-
-	int i;
 
 	for (i = 0; i < 26; i++)
 	{
