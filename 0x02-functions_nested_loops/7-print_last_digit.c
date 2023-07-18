@@ -8,7 +8,7 @@
 {
 	int i = x % 10;
 
-	printf("%d", i);
+	_putchar('0' + i);
 
 	return (i);
 }
