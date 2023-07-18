@@ -13,7 +13,7 @@
 		{
 			printf("%2d, ", i * n);
 		}
-		_putchar(10);
+		printf("\n");
 	}
 }
 
