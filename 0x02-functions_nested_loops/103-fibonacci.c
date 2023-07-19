@@ -1,5 +1,4 @@
 #include <stdio.h>
-#define MAX_VALUE 4000000
 
 /*
  *
@@ -14,7 +13,7 @@
 {
 	unsigned long int numbers;
 
-	printf("%lu", fibon(numbers));
+	printf("%lu\n", fibon(numbers));
 
 	return (0);
 }
@@ -23,17 +22,17 @@
  *
  * Function Definition here
  *
- */unsigned long int fibon(unsigned long int n)
+ */unsigned long int fibon(unsigned long int)
 {
 	unsigned long int t1 = 1, t2 = 2;
-	unsigned long int i, next = t1 + t2, sum;
+	unsigned long int sum = t2;
 
-	while (next <= 4000000)
+	while (t1 + t2 <= 4000000)
 	{
-	next = next + t2;
-	if (next % 2 == 0)
-	sum = sum + next;
-	t1 = next - t1;
+	t2 += t1;
+	if (t2 % 2 == 0)
+	sum = sum + t2;
+	t1 = t2 - t1;
 	}
-	printf("\n");
+	return (sum);
 }
