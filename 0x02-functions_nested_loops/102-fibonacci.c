@@ -3,7 +3,7 @@
 /*
  *
  *
- */void fibon(unsigned int n); /* Function protoypes for fibonacci */
+ */void fibon(unsigned long int n); /* Function protoypes for fibonacci */
 
 /*
  *
@@ -22,10 +22,10 @@
  *
  * Function Definition here
  *
- */void fibon(unsigned int n)
+ */void fibon(unsigned long int n)
 {
-	unsigned int term1 = 1, term2 = 2;
-	unsigned int i, next;
+	unsigned long int term1 = 1, term2 = 2;
+	unsigned long int i, next;
 
 	printf("1, 2, ");
 
