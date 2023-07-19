@@ -22,7 +22,7 @@
  *
  * Function Definition here
  *
- */unsigned long int fibon(unsigned long int)
+ */unsigned long int fibon(unsigned long int n)
 {
 	unsigned long int t1 = 1, t2 = 2;
 	unsigned long int sum = t2;
