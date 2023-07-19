@@ -24,7 +24,7 @@ void fibon(int n);
 
 	for (int i = 0; i < n; i++)
 	{
-		printf("%d, ");
+		printf("%d, ", term1);
 
 		next = term1 + term2;
 		term1 = term2;
