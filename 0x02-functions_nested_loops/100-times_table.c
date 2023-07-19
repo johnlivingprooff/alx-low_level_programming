@@ -32,6 +32,6 @@
 	}
 	else
 	{
-		printf("\n");
+		printf(void);
 	}
 }
