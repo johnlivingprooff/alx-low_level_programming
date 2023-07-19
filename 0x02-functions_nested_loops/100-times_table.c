@@ -20,7 +20,7 @@
 				prod = i * x;
 				if (x == n)
 				{
-					printf("%3d", prod); /* --9 */
+					printf("%3d", prod); /* --0 */
 				}
 				else if (x == 0)
 				{
@@ -28,7 +28,7 @@
 				}
 				else
 				{
-					printf("%6d, ", prod); /* --6,  */
+					printf("%3d, ", prod); /* --6,  */
 				}
 			}
 			printf("\n");
