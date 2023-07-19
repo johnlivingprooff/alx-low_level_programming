@@ -34,7 +34,7 @@
 	{
 		next = term1 + term2;
 
-		printf(" ,%lu", next);
+		printf(", %lu", next);
 
 		term1 = term2;
 		term2 = next;
