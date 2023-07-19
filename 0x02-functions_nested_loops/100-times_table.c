@@ -14,13 +14,13 @@
 			for (x = 0; x <= n; x++)
 			{
 				prod = i * x;
-				if (x <= 0)
-				{
-					printf("%2d", prod);
-				}
-				else if (x == n)
+				if (x == n)
 				{
 					printf("%3d", prod);
+				}
+				else if (x == 0)
+				{
+					printf("%d, ", prod);
 				}
 				else
 				{
