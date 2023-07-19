@@ -16,7 +16,7 @@
 				prod = i * x;
 				if (x == 0)
 				{
-					printf("%2d, ", prod);
+					printf("%d, ", prod);
 				}
 				else if (x == n)
 				{
@@ -24,7 +24,7 @@
 				}
 				else
 				{
-					printf("%2d, ", prod);
+					printf("%3d, ", prod);
 				}
 			}
 			printf("\n");
