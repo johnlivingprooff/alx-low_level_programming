@@ -16,11 +16,11 @@
 				prod = i * x;
 				if (x == n)
 				{
-					if (n <= 0)
+					if (n == 0)
 					{
 						printf("%d", prod);
 					}
-					else
+					else if (!(n > 15 || n < 0))
 					{
 						printf("%3d", prod);
 					}
