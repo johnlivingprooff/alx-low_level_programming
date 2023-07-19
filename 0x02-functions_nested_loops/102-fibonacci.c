@@ -38,4 +38,5 @@
 		term1 = term2;
 		term2 = next;
 	}
+	printf("\n");
 }
