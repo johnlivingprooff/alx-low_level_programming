@@ -28,7 +28,7 @@ void fibon(int n);
 	{
 		next = term1 + term2;
 
-		printf("%d, ", term1);
+		printf("%d, ", next);
 
 		term1 = term2;
 		term2 = next;
