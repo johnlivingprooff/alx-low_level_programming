@@ -37,5 +37,9 @@
 
 		term1 = term2;
 		term2 = next;
+		if (i == n)
+		{
+			print("%lu", next);
+		}
 	}
 }
