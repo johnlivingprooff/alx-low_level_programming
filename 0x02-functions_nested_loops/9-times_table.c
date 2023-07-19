@@ -18,7 +18,7 @@
 			}
 			else if (n == 9)
 			{
-				printf("%2d", prod);
+				printf("%2d\n", prod);
 			}
 			else
 			{
