@@ -1,31 +1,41 @@
 #include <stdio.h>
 
-void fibon(int n);
+/*
+ *
+ *
+ */void fibon(int n); /* Function protoypes for fibonacci */
 
-int main(void)
+/*
+ *
+ *Main Entry point; retrns 0
+ *
+ */int main(void)
 {
-    int numbers = 50;
+	int numbers = 50;
 
-    fibon(numbers);
+	fibon(numbers);
 
-    return 0;
+	return (0);
 }
 
-void fibon(int n)
+/*
+ *
+ * Function Definition here
+ *
+ */void fibon(int n)
 {
-    int term1 = 1, term2 = 2;
-    int i, next;
+	int term1 = 1, term2 = 2;
+	int i, next;
 
-    printf("1, 2, ");
+	printf("1, 2, ");
 
-    for (i = 2; i < n; i++)
-    {
-        next = term1 + term2;
+	for (i = 2; i < n; i++)
+	{
+		next = term1 + term2;
 
-        printf("%d, ", next);
+		printf("%d, ", next);
 
-        term1 = term2;
-        term2 = next;
-    }
+		term1 = term2;
+		term2 = next;
+	}
 }
- 
