@@ -16,7 +16,7 @@
 				prod = i * x;
 				if (x == n)
 				{
-					if (n == 0)
+					if (n <= 0)
 					{
 						printf("%d", prod);
 					}
