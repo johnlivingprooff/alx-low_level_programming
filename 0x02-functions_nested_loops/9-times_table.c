@@ -20,6 +20,10 @@
 			{
 				printf("%2d", prod);
 			}
+			else
+			{
+				printf("%d, ", prod);
+			}
 		}
 		printf("\n");
 	}
