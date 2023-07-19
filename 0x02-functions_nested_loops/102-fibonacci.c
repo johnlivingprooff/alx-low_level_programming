@@ -24,8 +24,8 @@
  *
  */void fibon(int n)
 {
-	int term1 = 1, term2 = 2;
-	int i, next;
+	unsigned int term1 = 1, term2 = 2;
+	unsigned int i, next;
 
 	printf("1, 2, ");
 
@@ -33,7 +33,7 @@
 	{
 		next = term1 + term2;
 
-		printf("%d, ", next);
+		printf("%llu, ", next);
 
 		term1 = term2;
 		term2 = next;
