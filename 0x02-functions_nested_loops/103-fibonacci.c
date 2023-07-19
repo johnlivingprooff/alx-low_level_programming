@@ -3,7 +3,7 @@
 /*
  *
  *
- */unsigned long int fibon(unsigned long int sum); /* Function protoypes for fibonacci */
+ */unsigned long int fibon(unsigned long int sum);
 
 /*
  *
@@ -12,6 +12,7 @@
  */int main(void)
 {
 	unsigned long int numbers, n = 0;
+
 	numbers = fibon(n);
 
 	printf("%lu\n", numbers);
@@ -26,6 +27,7 @@
  */unsigned long int fibon(unsigned long int sum)
 {
 	unsigned long int t1 = 1, t2 = 2;
+
 	sum = t2;
 
 	while (t1 + t2 <= 4000000)
