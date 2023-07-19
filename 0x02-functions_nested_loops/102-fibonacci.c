@@ -20,9 +20,9 @@ void fibon(int n);
  */void fibon(int n)
 {
 	int term1 = 1, term2 = 2;
-	int next;
+	int i, next;
 
-	for (int i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
 		printf("%d, ", term1);
 
