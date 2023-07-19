@@ -11,9 +11,9 @@
 	{
 		for (n = 0; n <= 9; n++)
 		{
+			prod = i * n;
 			if (i != 9)
 			{
-				prod = i * n;
 				printf("%2d, ", prod);
 			}
 			else
