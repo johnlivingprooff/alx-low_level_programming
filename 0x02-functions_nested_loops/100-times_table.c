@@ -14,7 +14,7 @@
 			for (x = 0; x <= n; x++)
 			{
 				prod = i * x;
-				if (x == 0)
+				if (x <= 0)
 				{
 					printf("%d, ", prod);
 				}
