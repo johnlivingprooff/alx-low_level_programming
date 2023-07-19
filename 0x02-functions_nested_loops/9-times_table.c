@@ -18,7 +18,7 @@
 			}
 			else
 			{
-				printf("%2d", prod);
+				printf("%2d\n", prod);
 			}
 		}
 		printf("\n");
