@@ -12,9 +12,12 @@
 		for (n = 0; n <= 9; n++)
 		{
 			prod = i * n;
-			if (n != 9)
+			if (n <= 9)
 			{
-				printf("%2d, ", prod);
+				_putchar(' ');
+				_putchar(prod + '0');
+				_putchar(',');
+				_putchar(' ');
 			}
 			else if (n == 9)
 			{
