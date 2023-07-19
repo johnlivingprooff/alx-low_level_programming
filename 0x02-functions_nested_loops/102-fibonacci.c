@@ -27,7 +27,7 @@
 	unsigned long int term1 = 1, term2 = 2;
 	unsigned long int i, next;
 
-	printf("1, 2, ");
+	printf("1, 2");
 
 	for (i = 2; i < n; i++)
 	{
@@ -38,5 +38,4 @@
 		term1 = term2;
 		term2 = next;
 	}
-		printf("\n");
 }
