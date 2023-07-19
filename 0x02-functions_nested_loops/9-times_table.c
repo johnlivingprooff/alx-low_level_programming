@@ -14,6 +14,10 @@
 			prod = i * n;
 			printf("%2d, ", prod);
 		}
+		if (i == 9)
+		{
+			printf("%2d", prod);
+		}
 		printf("\n");
 	}
 }
