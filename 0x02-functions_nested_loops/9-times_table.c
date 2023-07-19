@@ -5,7 +5,7 @@
  * Function that prints the last digit of a number.
  */void times_table(void)
 {
-	int i, n, prod;
+	int div, i, n, prod;
 
 	for (i = 0; i <= 9; i++)
 	{
@@ -14,7 +14,8 @@
 			prod = i * n;
 			printf("%2d, ", prod);
 		}
-		if (i == 9)
+		div = prod / n
+		if (div == 9)
 		{
 			printf("%2d", prod);
 		}
