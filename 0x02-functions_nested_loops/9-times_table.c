@@ -14,16 +14,11 @@
 			prod = i * n;
 			if (n <= 9)
 			{
-				_putchar(' ');
-				_putchar(prod + '0');
-				_putchar(',');
-				_putchar(' ');
+				printf("%2d, ", prod);
 			}
 			else if (n == 9)
 			{
-				_putchar(prod + '0');
-				_putchar(',');
-				_putchar(' ');
+				printf("%2d", prod);
 			}
 		}
 		printf("\n");
