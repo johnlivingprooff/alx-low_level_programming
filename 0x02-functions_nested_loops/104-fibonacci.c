@@ -31,11 +31,11 @@
 	half1 += 1;
 	half2 %= 10000000000;
 	}
-	if (i != 98)
+	if (i < 98)
 	printf(", %lu%lu", half1, half2);
 	f1h1 = f2h1;
-	f1h2 = f2h2;
-	f2h1 = half1;
+	f2h1 = f1h2;
+	f1h2 = half1;
 	f2h2 = half2;
 	}
 	printf("\n");
