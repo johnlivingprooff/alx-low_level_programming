@@ -12,13 +12,17 @@
 		for (n = 0; n <= 9; n++)
 		{
 			prod = i * n;
-			if (i != 9)
+			if (i == 0)
 			{
-				printf("%2d, ", prod);
+				printf("%d, ", prod);
 			}
 			else if (i == 9)
 			{
 				printf("%2d", prod);
+			}
+			else
+			{
+				printf("%2d, ", prod);
 			}
 		}
 		printf("\n");
