@@ -40,7 +40,7 @@
 			term1 = term2;
 			term2 = next;
 		}
-		else
+		else if (i == n)
 		{
 		printf("%lu", next);
 		}
