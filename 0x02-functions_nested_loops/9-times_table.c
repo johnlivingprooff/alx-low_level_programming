@@ -14,7 +14,7 @@
 			prod = i * n;
 			printf("%2d, ", prod);
 		}
-		div = prod / n
+		div = prod / n;
 		if (div == 9)
 		{
 			printf("%2d", prod);
