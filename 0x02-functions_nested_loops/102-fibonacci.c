@@ -1,36 +1,31 @@
 #include <stdio.h>
 
 void fibon(int n);
-/*
- * main - Entry point
- *
- *
- */int main(void)
+
+int main(void)
 {
-	int numbers = 50;
+    int numbers = 50;
 
-	fibon(numbers);
+    fibon(numbers);
 
-	return (0);
+    return 0;
 }
-/*
- * Function creates a fibonacci sequence
- * the First 50
- *
- */void fibon(int n)
+
+void fibon(int n)
 {
-	int term1 = 1, term2 = 2;
-	int i, next;
+    int term1 = 1, term2 = 2;
+    int i, next;
 
-	printf("%d, %d, ", term1, term2);
+    printf("1, 2, ");
 
-	for (i = 2; i < n; i++)
-	{
-		next = term1 + term2;
+    for (i = 2; i < n; i++)
+    {
+        next = term1 + term2;
 
-		printf("%d, ", next);
+        printf("%d, ", next);
 
-		term1 = term2;
-		term2 = next;
-	}
+        term1 = term2;
+        term2 = next;
+    }
 }
+ 
