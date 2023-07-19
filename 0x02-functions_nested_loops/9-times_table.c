@@ -6,7 +6,6 @@
  */void times_table(void)
 {
 	int i, n, prod;
-	int ch = 0;
 
 	for (i = 0; i <= 9; i++)
 	{
@@ -16,15 +15,12 @@
 			if (n < 9)
 			{
 				printf("%2d, ", prod);
-				ch += 4;
 			}
 			else if (n == 9)
 			{
 				printf("%2d", prod);
-				ch += 2;
 			}
-
-			if (ch >= 380)
+			else
 			{
 				return;
 			}
