@@ -20,7 +20,10 @@
 					{
 						printf("%d", prod);
 					}
-					printf("%3d", prod);
+					else
+					{
+						printf("%3d", prod);
+					}
 				}
 				else if (x == 0)
 				{
