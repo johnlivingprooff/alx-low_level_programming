@@ -18,11 +18,11 @@
 			}
 			else if (n == 0)
 			{
-				printf("%d", prod)
+				printf("%d", prod);
 			}
 			else
 			{
-				printf("%2d, ", prod)
+				printf("%2d, ", prod);
 			}
 		}
 		printf("\n");
