@@ -18,7 +18,7 @@
 			}
 			else if (n == 0)
 			{
-				printf("%d", prod);
+				printf("%d,", prod);
 			}
 			else
 			{
