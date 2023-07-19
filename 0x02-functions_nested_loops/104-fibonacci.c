@@ -10,7 +10,7 @@
 	unsigned long fib1 = 1, fib2 = 2, next;
 	unsigned long f1h1, f2h1, f1h2, f2h2, half1, half2;
 	
-	printf("1,2");
+	printf("1, 2");
 	for (i = 0; i <= 92; i++)
 	{
 	next = fib1 + fib2;
@@ -38,4 +38,5 @@
 	f2h2 = half2;
 	}
 	printf("\n");
+	return (0);
 }
