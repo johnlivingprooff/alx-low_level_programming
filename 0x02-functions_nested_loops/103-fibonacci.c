@@ -3,7 +3,7 @@
 /*
  *
  *
- */unsigned long int fibon(unsigned long int n); /* Function protoypes for fibonacci */
+ */unsigned long int fibon(unsigned long int sum); /* Function protoypes for fibonacci */
 
 /*
  *
@@ -22,10 +22,10 @@
  *
  * Function Definition here
  *
- */unsigned long int fibon(unsigned long int n)
+ */unsigned long int fibon(unsigned long int sum)
 {
 	unsigned long int t1 = 1, t2 = 2;
-	unsigned long int sum = t2;
+	sum = t2;
 
 	while (t1 + t2 <= 4000000)
 	{
