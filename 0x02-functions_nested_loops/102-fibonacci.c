@@ -8,7 +8,7 @@ void fibon(int n);
  */int main(void)
 {
 	int numbers = 50;
-	
+
 	fibon(numbers);
 
 	return (0);
