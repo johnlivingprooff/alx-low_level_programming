@@ -24,8 +24,8 @@
  *
  */void fibon(int n)
 {
-	unsigned int term1 = 1, term2 = 2;
-	unsigned int i, next;
+	unsigned long long term1 = 1, term2 = 2;
+	unsigned long long i, next;
 
 	printf("1, 2, ");
 
