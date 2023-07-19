@@ -29,10 +29,11 @@
 	if (f1h2 + f2h2 > 9999999999)
 	{
 	half1 += 1;
-	half2 %= 10000000000;
+	half2 %= 100000000000;
 	}
-	if (i < 98)
-	printf(", %lu%lu", half1, half2);
+	printf("%lu%lu", half1, half2);
+	if (i != 98)
+	printf(", ");
 	f1h1 = f2h1;
 	f2h1 = f1h2;
 	f1h2 = half1;
