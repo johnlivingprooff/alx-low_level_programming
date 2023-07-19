@@ -28,18 +28,21 @@
 	unsigned long int i, next;
 
 	printf("1, 2, ");
-
-	for (i = 2; i < n; i++)
+	if (i != n)
 	{
-		next = term1 + term2;
-
-		printf("%lu, ", next);
-
-		term1 = term2;
-		term2 = next;
-		if (i == n)
+		for (i = 2; i < n; i++)
 		{
+			next = term1 + term2;
+
+			printf("%lu, ", next);
+
+			term1 = term2;
+			term2 = next;
 			printf("%lu", next);
 		}
+	}
+	else
+	{
+		printf("%lu", next);
 	}
 }
