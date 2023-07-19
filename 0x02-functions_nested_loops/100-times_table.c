@@ -20,7 +20,7 @@
 				}
 				else if (x == n)
 				{
-					printf("%2d", prod);
+					printf("%3d", prod);
 				}
 				else
 				{
