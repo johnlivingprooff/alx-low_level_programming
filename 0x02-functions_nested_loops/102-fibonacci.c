@@ -31,18 +31,12 @@
 
 	for (i = 2; i < n; i++)
 	{
-		if (i != n)
-		{
-			next = term1 + term2;
+		next = term1 + term2;
 
-			printf("%lu, ", next);
+		printf(" ,%lu", next);
 
-			term1 = term2;
-			term2 = next;
-		}
-		else if (i == n)
-		{
-		printf("%lu", next);
-		}
+		term1 = term2;
+		term2 = next;
 	}
+		printf("\n");
 }
