@@ -39,7 +39,7 @@
 		term2 = next;
 		if (i == n)
 		{
-			print("%lu", next);
+			printf("%lu", next);
 		}
 	}
 }
