@@ -16,7 +16,7 @@
 			{
 				printf("%2d, ", prod);
 			}
-			else if (i = 9)
+			else if (i == 9)
 			{
 				printf("%2d", prod);
 			}
