@@ -21,11 +21,9 @@
 			}
 			else if (n == 9)
 			{
-				printf("%2d", prod);
-			}
-			else
-			{
-				printf("%d, ", prod);
+				_putchar(prod + '0');
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
 		printf("\n");
