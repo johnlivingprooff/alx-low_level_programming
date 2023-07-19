@@ -21,18 +21,9 @@
 				if (x == n)
 				{
 					/*printf("%3d", prod);*/
-					if (n >= 100)
-					{
-						_putchar(prod / 100 + '0');
-						_putchar(prod / 10 + '0');
-						_putchar(prod % 10 + '0');
-
-					}
-					else
-					{
-						_putchar(prod / 10 + '0');
-						_putchar(prod % 10 + '0');
-					}
+					_putchar(prod / 100 + '0');
+					_putchar(prod / 10 + '0');
+					_putchar(prod % 10 + '0');
 				}
 				else if (x == 0)
 				{
