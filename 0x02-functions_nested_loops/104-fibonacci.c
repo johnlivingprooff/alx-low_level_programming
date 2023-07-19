@@ -35,8 +35,8 @@
 	if (i != 98)
 	printf(", ");
 	f1h1 = f2h1;
-	f2h1 = f1h2;
-	f1h2 = half1;
+	f1h2 = f2h2;
+	f2h1 = half1;
 	f2h2 = half2;
 	}
 	printf("\n");
