@@ -12,8 +12,9 @@
  */int main(void)
 {
 	unsigned long int numbers;
+	numbers = fibon(numbers);
 
-	printf("%lu\n", fibon(numbers));
+	printf("%lu\n", numbers);
 
 	return (0);
 }
