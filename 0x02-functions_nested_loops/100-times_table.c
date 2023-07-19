@@ -9,18 +9,18 @@
 
 	if (!(n > 15 || n < 0))
 	{
-		for (i = 0; i <= 9; i++)
+		for (i = 0; i <= n; i++)
 		{
-			for (x = 0; x <= 9; x++)
+			for (x = 0; x <= n; x++)
 			{
 				prod = i * x;
-				if (x == n)
-				{
-					printf("%2d", prod);
-				}
-				else if (x == 0)
+				if (x == 0)
 				{
 					printf("%d, ", prod);
+				}
+				else if (x == n)
+				{
+					printf("%2d", prod);
 				}
 				else
 				{
