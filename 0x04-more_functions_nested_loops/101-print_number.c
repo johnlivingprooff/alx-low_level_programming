@@ -7,7 +7,7 @@
 */
 void print_number(int n)
 {
-	int count = 0, digit, i, tmp;
+	int count = 0, digit, i, tmp, an;
 	int div = 1;
 
 	/* handles output when n is 0 */
@@ -26,10 +26,11 @@ void print_number(int n)
 	}
 
 	/* for negative n */
+	an = n;
 	if (n < 0)
 	{
 		_putchar('-');
-		tmp = -tmp;
+		an = -an;
 	}
 
 	/* what is Div? */
@@ -39,11 +40,12 @@ void print_number(int n)
 	}
 
 	/* extracts & prints each digit */
+	an = n;
 	for (i = count; i >= 1; i--)
 	{
-		digit = tmp / div;
+		digit = an / div;
 		_putchar(digit + '0');
-		tmp = tmp % div; /* removes left digit */
+		an = an % div; /* removes left digit */
 		div /= 10;
 	}
 }
