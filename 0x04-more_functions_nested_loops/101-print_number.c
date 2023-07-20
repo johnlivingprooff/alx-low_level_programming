@@ -8,7 +8,7 @@
 void print_number(int n)
 {
 	int count = 0, digit, i, tmp, an;
-	int div = 1, nn;
+	int div = 1;
 
 	/* handles output when n is 0 */
 	if (n == 0)
@@ -24,11 +24,10 @@ void print_number(int n)
 		count++;
 	}
 	/* for negative n */
-	nn = n;
 	if (n < 0)
 	{
 		_putchar('-');
-		nn = -nn;
+		n = -n;
 	}
 	/* what is Div? */
 	for (i = 1; i < count; i++)
