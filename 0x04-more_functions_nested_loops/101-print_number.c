@@ -27,7 +27,7 @@ void print_number(int n)
 	/* for negative n */
 	if (n < 0)
 		_putchar('-');
-	
+
 	/* extracts & prints each digit */
 	for (i = count; i >= 0; i--)
 	{
