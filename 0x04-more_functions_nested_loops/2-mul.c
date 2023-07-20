@@ -4,7 +4,7 @@
 * mul - checks for uppercase character.
 * @a: collects int 1
 * @b: collects int 2
-* Return: mul
+* Return: n;
 */
 int mul(int a, int b)
 {
