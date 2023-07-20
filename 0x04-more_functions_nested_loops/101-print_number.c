@@ -7,8 +7,8 @@
 */
 void print_number(int n)
 {
-	int count, digit, i;
-	int div = 10;
+	int count = 0, digit, i, temp;
+	int div = 1;
 
 	/* handles output when n is 0 */
 	if (n == 0)
@@ -18,20 +18,32 @@ void print_number(int n)
 	}
 
 	/* to count the digits in 'n' */
-	while (n != 0)
+	temp = n;
+	while (temp != 0)
 	{
-		n /= 10;
+		temp /= 10;
 		count++;
 	}
 
 	/* for negative n */
 	if (n < 0)
+	{
 		_putchar('-');
+		n = -n;
+	}
+
+	/* what is Div? */
+	for (i = 1; i < count; i++)
+	{
+		div *= 10;
+	}
 
 	/* extracts & prints each digit */
-	for (i = count; i >= 0; i--)
+	for (i = count; i >= 1; i--)
 	{
 		digit = n / div;
 		_putchar(digit + '0');
+		n = n % div; /* removes left digit */
+		div /= 10;
 	}
 }

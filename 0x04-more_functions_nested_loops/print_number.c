@@ -31,7 +31,7 @@ void print_number(int n)
 		_putchar('-');
 		n = -n;
 	}
-	
+
 	/* what is Div? */
 	for (i = 1; i < count; i++)
 	{
