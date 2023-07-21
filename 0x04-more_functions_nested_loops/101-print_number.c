@@ -7,9 +7,9 @@
 */
 void print_number(int n)
 {
-int count = 0, digit, i, tmp, an;
-int div = 1;
-int absolute_n = n < 0 ? -n : n;
+unsigned int count = 0, digit, i, tmp, an;
+unsigned int div = 1;
+unsigned int absolute_n = n < 0 ? -n : n;
 
 /* handles output when n is 0 */
 if (absolute_n == 0)
