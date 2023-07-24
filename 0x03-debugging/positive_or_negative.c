@@ -9,20 +9,20 @@
  *
  * Retuns (0)
  *
- */void positive_or_negative(int n)
+ */void positive_or_negative(long int n)
 {
 	/* your code goes there */
 	if (n > 0)
 	{
-		printf("%d is positive\n", n);
+		printf("%li is positive\n", n);
 	}
 	else if (n == 0)
 	{
-		printf("%d is zero\n", n);
+		printf("%li is zero\n", n);
 	}
 	else
 	{
-		printf("%d is negative\n", n);
+		printf("%li is negative\n", n);
 	}
 	return;
 }
