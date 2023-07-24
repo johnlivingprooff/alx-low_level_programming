@@ -1,6 +1,5 @@
 #include "main.h"
 
-int _strlen(char *s);
 /**
 * _puts - prints out a string
 * @str: pointer that prints string
