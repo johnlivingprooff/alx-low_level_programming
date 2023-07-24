@@ -8,14 +8,12 @@
 */
 void print_rev(char *s)
 {
-	int length;
+	int length = 0;
 
 	length = strlen(s);
-	/* printf("lenght of string: %d\n", length); */
-	while (length > 0)
-	{
-		_putchar(s[length - 1]);
-		length--;
-	}
+
+	for (--length; length >= 0; --length)
+		_putchar(s[length]);
+
 	_putchar(10);
 }
