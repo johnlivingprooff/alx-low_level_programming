@@ -9,13 +9,14 @@
 void rev_string(char *s)
 {
 	int length;
+	char tmp;
 
 	length = strlen(s);
-	/* printf("lenght of string: %d\n", length); */
+	/* printf("String lenght is %d\n", length); */
+
 	while (length > 0)
 	{
-		_putchar(s[length - 1]);
+		tmp = s[length - 1];
 		length--;
 	}
-	_putchar(10);
 }
