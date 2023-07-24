@@ -8,15 +8,16 @@
 */
 void rev_string(char *s)
 {
-	int length;
+	int length, i;
 	char tmp;
 
 	length = strlen(s);
-	/* printf("String lenght is %d\n", length); */
 
-	while (length > 0)
+	for (i = 0; i < length / 2; ++i)
 	{
-		tmp = s[length - 1];
-		length--;
+		tmp = s[i];
+		s[i] = s[length - 1 - i];
+		s[length - 1 - i] = tmp;
+
 	}
 }

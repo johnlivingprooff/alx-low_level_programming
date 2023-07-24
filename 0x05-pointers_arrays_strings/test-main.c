@@ -8,10 +8,11 @@
  */
 int main(void)
 {
-    char s[10] = "My School";
+	char str[100];
 
-    printf("%s\n", s);
-    rev_string(s);
-    printf("%s\n", s);
+	/* str = &collect; */
+    scanf("%s", str);
+	printf("%p\n", str);
+    rev_string(str);
     return (0);
 }
