@@ -1,21 +1,20 @@
 #include "main.h"
-#include <string.h>
 
 /**
-* _puts - prints out a string
-* @str: pointer that prints string
+* _print_rev - prints out a string
+* @s: pointer that prints string in reverse
 * Return: void
 */
-void _puts(char *str)
+void print_rev(char *s)
 {
 	int length;
 
-	length = strlen(str);
+	length = _strlen(s);
 	printf("lenght of string: %d\n", length);
 	while (length - 1 > 0)
 	{
-		_putchar(*str);
-		str--;
+		_putchar(*s);
+		s--;
 	}
 	_putchar(10);
 }
