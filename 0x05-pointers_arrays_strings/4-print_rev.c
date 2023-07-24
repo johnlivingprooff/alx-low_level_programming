@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
 * _puts - prints out a string
@@ -9,7 +10,7 @@ void _puts(char *str)
 {
 	int length;
 
-	length = _strlen(str);
+	length = strlen(str);
 	printf("lenght of string: %d\n", length);
 	while (length - 1 > 0)
 	{
