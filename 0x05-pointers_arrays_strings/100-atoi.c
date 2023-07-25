@@ -7,8 +7,10 @@
 */
 int _atoi(char *s)
 {
-	int i, n = 0;
+	int i;
+	unsigned int n = 0;
 
+	if ()
 	for (i = 0; s[i] >= '0' && s[i] <= '9'; ++i)
 		n = 10 * n + (s[i] - '0');
 	return (n);
