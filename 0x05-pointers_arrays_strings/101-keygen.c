@@ -1,30 +1,34 @@
-#include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
-/**
-* main - program that generates random valid
-* passwords for the program 101-crackme.
-*
-* Return: Always 0.
-*/
-int main(void)
-{
-	const char typeset[62];
-	int a, i, x;
-	int password[10];
+#define PASSWORD_LENGTH 10
 
+int main() {
+    // Seed the random number generator with the current time
+    srand(time(NULL));
 
-	srand(time(0));
-	printf("%s", typeset);
+    // Define a character set containing all valid characters for the password
+    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-	for (i = 0; i < 11; i++)
-	{
-		x = rand() % (sizeof(typeset));
-		password[i] = typeset[x];
-	}
+    // Create a buffer to store the generated password (plus one additional space for the null terminator)
+    char password[PASSWORD_LENGTH + 1];
 
-	printf("%ls\n", password);
-	
-	return (0);
+    // Generate random characters for the password
+    for (int i = 0; i < PASSWORD_LENGTH; i++) {
+        // Use the rand() function to get a random index within the character set
+        int index = rand() % (sizeof(charset) - 1);
+
+        // Store the randomly selected character in the password buffer
+        password[i] = charset[index];
+    }
+
+    // Add the null terminator at the end to make it a valid C-style string
+    password[PASSWORD_LENGTH] = '\0';
+
+    // Print the generated password
+    printf("Generated Password: %s\n", password);
+
+    return 0;
 }
+
