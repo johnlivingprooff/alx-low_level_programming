@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define PWD_L 10
-
 /**
 * main - program that generates random valid
 * passwords for the program 101-crackme.
@@ -12,23 +10,21 @@
 */
 int main(void)
 {
-	const char typeset[95];
-	unsigned int a, i, x;
-	char password[PWD_L + 1];
+	const char typeset[62];
+	int a, i, x;
+	int password[10];
 
 
 	srand(time(0));
-	for (a = 33; a <= 126; a++)
-		putchar(typeset[a]);
+	printf("%s", typeset);
 
-	for (i = 0; i < PWD_L; i++)
+	for (i = 0; i < 11; i++)
 	{
-		x = rand() % (sizeof(typeset) - 1);
+		x = rand() % (sizeof(typeset));
 		password[i] = typeset[x];
 	}
-	password[PWD_L] = '\0';
 
-	printf("%s\n", password);
+	printf("%ls\n", password);
 	
 	return (0);
 }
