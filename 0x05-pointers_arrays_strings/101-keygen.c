@@ -2,10 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define PWD_L 15
+#define PWD_L 10
 
 /**
-* main - Cracks program password
+* main - program that generates random valid
+* passwords for the program 101-crackme.
 *
 * Return: Always 0.
 */
