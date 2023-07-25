@@ -15,6 +15,8 @@ int _atoi(char *s)
 		sign *= -1;
 	}
 	else if (s[0] == ' ' || s[0] == '+')
+		sign = sign * 1;
+	else
 	{
 		for (i = 0; s[i] >= '0' && s[i] <= '9'; ++i)
 			n = 10 * n + (s[i] - '0');
