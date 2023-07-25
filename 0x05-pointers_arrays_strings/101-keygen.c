@@ -23,7 +23,7 @@ int main(void)
 	for (i = 0; i < PWD_L; i++)
 	{
 		x = rand() % (sizeof(typeset) - 1);
-		password[i] = typeset[index];
+		password[i] = typeset[x];
 	}
 	password[PWD_L] = '\0';
 
