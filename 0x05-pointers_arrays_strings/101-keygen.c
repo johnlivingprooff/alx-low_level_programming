@@ -12,11 +12,11 @@
 int main(void)
 {
 	const char typeset[95];
-	int a, i, x;
+	unsigned int a, i, x;
 	char password[PWD_L + 1];
 
 
-	srand(time(NULL));
+	srand(time(0));
 	for (a = 33; a <= 126; a++)
 		putchar(typeset[a]);
 
