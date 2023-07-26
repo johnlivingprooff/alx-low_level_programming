@@ -19,6 +19,8 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		if (*src <= n)
 			*dest = *src;
+		else
+			break;
 	}
 	return (tmp);
 }
