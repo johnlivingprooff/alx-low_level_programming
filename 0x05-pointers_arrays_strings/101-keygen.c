@@ -13,8 +13,8 @@
 */
 int main(void)
 {
-	char pass[PASS + 1];
-	int i, a, x;
+	int pass[PASS + 1];
+	int i, x;
 
 	srand(time(NULL));
 
@@ -25,6 +25,11 @@ int main(void)
 	}
 	pass[PASS] = '\0';
 
-	printf("%s\n", pass);
+	for (int a = 0; a < PASS + 1; a++)
+	{
+		putchar(pass[a] + '0');
+	}
+	
+	putchar(10);
 	return (0);
 }
