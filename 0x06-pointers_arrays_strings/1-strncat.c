@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* strncat - function that concatenates two strings. 
+* _strncat - function that concatenates two strings
 *
 * @dest: points to the address of the dest string in memory
 * @src: points to the address of the src string in memory
@@ -13,7 +13,8 @@ char *_strncat(char *dest, char *src, int n)
 {
 	char *tmp = dest;
 
-	for (; *dest != '\0'; dest++);
+	for (; *dest != '\0'; dest++)
+		;
 	for (; *src != '\0'; dest++, src++)
 	{
 		if (*src < n)
