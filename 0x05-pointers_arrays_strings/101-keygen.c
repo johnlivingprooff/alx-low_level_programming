@@ -14,7 +14,7 @@
 int main(void)
 {
 	int pass[PASS + 1];
-	int i, x;
+	int i, a, x;
 
 	srand(time(NULL));
 
@@ -25,7 +25,7 @@ int main(void)
 	}
 	pass[PASS] = '\0';
 
-	for (int a = 0; a < PASS + 1; a++)
+	for (a = 0; a < PASS + 1; a++)
 	{
 		putchar(pass[a] + '0');
 	}
