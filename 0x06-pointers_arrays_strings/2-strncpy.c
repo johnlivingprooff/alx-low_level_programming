@@ -18,6 +18,7 @@ char *_strncpy(char *dest, char *src, int n)
 		*tmp = *src;
 		n--;
 	}
-	*tmp = '\0';
+	for (; n > 0; tmp++, n--)
+		*tmp = '\0';
 	return (dest);
 }
