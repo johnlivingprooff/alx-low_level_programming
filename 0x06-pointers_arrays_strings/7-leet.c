@@ -13,9 +13,9 @@ char *leet(char *str)
 	char let[] = "aAeEoOtTlL";
 	char num[] = "4433007711";
 
-	for (i = 0; *str != '\0'; str++, i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (x = 0; x < 10; x++)
+		for (x = 0; x <= 10; x++)
 		{
 			if (let[x] == str[i])
 				str[i] = num[x];
