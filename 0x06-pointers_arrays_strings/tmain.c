@@ -8,22 +8,16 @@
  */
 int main(void)
 {
-	int n;
     char dt[98];
     char sc[8];
-    char *ptr;
 
-	printf("Enter Dest. string: ");
-	scanf("%6s", dt);
+	printf("Enter First string: ");
+	scanf("%s", dt);
 
-	printf("Enter Source sring: ");
-	scanf("%7s", sc);
+	printf("Enter Second sring: ");
+	scanf("%s", sc);
 
-	printf("Enter # of appendable Chars: ");
-	scanf("%d", &n);
-
-	ptr = _strncpy(dt, sc, n);
-	printf("%s\n", ptr);
+	printf("%d\n", _strcmp(dt, sc));
 
     return (0);
 }
