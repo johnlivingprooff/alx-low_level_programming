@@ -19,7 +19,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	for (; n2[l2]; l2++)
 		;
 	max_l = (l1 > l2) ? l1 : l2;
-	if (max_l >= size_r || max_l + 1 >= size_r)
+	if (max_l + 1 >= size_r)
 		return (NULL);
 	/* Addition: n1 + n2 = r */
 	i = l1 - 1, j = l2 - 1, k = max_l;
