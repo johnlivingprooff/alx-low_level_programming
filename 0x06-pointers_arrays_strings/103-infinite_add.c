@@ -1,10 +1,15 @@
 #include "main.h"
 
+/**
+* int_to_char - Function that converts an int to a string
+* @n: integer to be converted
+* @str: converted int
+*/
 void int_to_char(int n, char *str)
 {
 	int tmp = n, l = 0, i;
 
-	for(; tmp != 0; l++) /* Counts the digits in the int */
+	for (; tmp != 0; l++) /* Counts the digits in the int */
 		tmp /= 10; /* l keeps track of no of digits */
 
 	for (i = l - 1; i >= 0; i--)
