@@ -44,7 +44,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			r[0] = r[0 + k];
 	}
 	/* Adds '\0' at end of string */
-	r[max_l - k] = '\0';
+	r[max_l + 1] = '\0';
 	/* printf("%d, %d", l1, l2); */
 	return (r);
 }
