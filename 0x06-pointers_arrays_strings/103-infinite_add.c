@@ -1,10 +1,11 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
 * int_to_char - Function that converts an int to a string
 * @n: integer to be converted
 * @str: converted int
-*/
+*
 void int_to_char(int n, char *str)
 {
 	int tmp = n, l = 0, i;
@@ -16,8 +17,8 @@ void int_to_char(int n, char *str)
 		return;
 	}
 
-	for (; tmp != 0; l++) /* Counts the digits in the int */
-		tmp /= 10; /* l keeps track of no of digits */
+	for (; tmp != 0; l++) // Counts the digits in the int 
+		tmp /= 10; // l keeps track of no of digits 
 
 	for (i = l - 1; i >= 0; i--)
 	{
@@ -25,7 +26,7 @@ void int_to_char(int n, char *str)
 		n /= 10;
 	}
 	str[l] = '\0';
-}
+} */
 /**
 * infinite_add - Function adds two numbers
 * @n1: Number one
@@ -36,32 +37,48 @@ void int_to_char(int n, char *str)
 */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	unsigned int result, r1 = 0, r2 = 0;
-	int i, l1 = 0, l2 = 0, l_sum;
+	int l1 = 0, l2 = 0, max_l; /* l = length */
+	int i, j, k, d1, d2, carry = 0, sum;
 
 	for (; n1[l1]; l1++)
 		;
 	for (; n2[l2]; l2++)
 		;
-	if (l1 >= size_r || l2 >= size_r)
+
+	max_l = (l1 > l2) ? l1 : l2;
+	if (max_l >= size_r || max_l + 1 >= size_r)
 		return (NULL);
 
-	/* Converts string n1 & n2 to integer */
-	for (i = 0; i < l1; i++)
-		r1 = 10 * r1 + (n1[i] - '0');
-	for (i = 0; i < l2; i++)
-		r2 = 10 * r2 + (n2[i] - '0');
+	/* Addition: n1 + n2 = r */
+	i = l1 - 1, j = l2 - 1, k = max_l;
+	for (; i >= 0 || j >= 0 || carry != 0; i--, j--,k--)
+	{
+		d1 = (i >= 0) ? (n1[i] - '0') : 0;
+		d2 = (j >= 0) ? (n2[j] - '0') : 0;
 
-	/* Adds up value of n1&n2 and converts back to string */
-	result = r1 + r2;
-	int_to_char(result, r);
+		/* Integer arithmetic is possible, and begins */
+		sum = d1 + d2 + carry;
+		carry = sum / 10; /* removes last digit, and stores the rest in sum */
+		r[k] = '0' + (sum % 10); /* stores last digit in index k, as char */
+	}
 
-	l_sum = (result == 0) ? 1 : 0;
-	for (; result != 0; l_sum++)
-		result /= 10;
+	/* handles excess carry from loop */
+	if (carry != 0)
+	{
+		r[k] = '0' + carry;
+		k--;
+	}
 
-	if (l_sum >= size_r)
-		return (NULL);
+	/* handles when 0 starts the string */
+	if (r[0] == '0')
+	{
+		for (; max_l - k > 0; k++)
+			r[0] = r[0 + k];
+	}
 
+	/* Adds '\0' at end of string */
+	r[max_l - k] = '\0';
+
+	/* printf("%d, %d", l1, l2); */
 	return (r);
 }
