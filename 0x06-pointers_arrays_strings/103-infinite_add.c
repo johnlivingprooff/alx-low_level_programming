@@ -35,16 +35,16 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	/* handles excess carry from loop */
 	if (carry != 0)
 	{
-		r[k] = '0' + carry, k--;
-	}
+		if (k == -1)
+			return (NULL);
+		r[k] = '0' + carry;
+	} else
+		k++;
 	/* handles when 0 starts the string */
-	if (r[0] == '0')
-	{
-		for (; max_l - k > 0; k++)
-			r[0] = r[0 + k];
-	}
+		for (i = 0; max_l - k >= i; i++)
+			r[i] = r[i + k];
 	/* Adds '\0' at end of string */
-	r[max_l + 1] = '\0';
-	/* printf("%d, %d", l1, l2); */
+	r[max_l - k + 1] = '\0';
+	
 	return (r);
 }
