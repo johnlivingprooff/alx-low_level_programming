@@ -45,6 +45,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			r[i] = r[i + k];
 	/* Adds '\0' at end of string */
 	r[max_l - k + 1] = '\0';
-	
+
 	return (r);
 }
