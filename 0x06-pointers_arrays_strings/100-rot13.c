@@ -12,7 +12,7 @@ char *rot13(char *str)
 	int i, x;
 	char forwd[] = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 	char rev[] = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
-	
+
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		for (x = 0; x <= 52; x++)
