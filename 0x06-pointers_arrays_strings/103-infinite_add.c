@@ -9,6 +9,13 @@ void int_to_char(int n, char *str)
 {
 	int tmp = n, l = 0, i;
 
+	if (n < 0)
+	{
+		n = -n;
+		str[0] = '-';
+		l = 1;
+	}
+
 	for (; tmp != 0; l++) /* Counts the digits in the int */
 		tmp /= 10; /* l keeps track of no of digits */
 
