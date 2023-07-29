@@ -22,7 +22,7 @@ void print_buffer(char *b, int size)
 
 	for (a = 0; a < size; a += 10)
 	{
-		printf("%08x", a);
+		printf("%08x: ", a);
 
 		for (x = 0; x < 10; x++)
 		{
