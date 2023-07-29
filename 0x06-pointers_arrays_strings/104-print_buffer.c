@@ -29,7 +29,7 @@ void print_buffer(char *b, int size)
 			if (a + x < size)
 				printf("%02x", (unsigned char)b[a + x]);
 			else
-				printf(" ");
+				printf("  ");
 
 			if (x % 2 != 0)
 				printf(" ");
@@ -40,7 +40,7 @@ void print_buffer(char *b, int size)
 			if (a + x < size)
 			{
 				c = b[a + x];
-				printf("%c", (isprint(c) || c == 32) ? c : 46);
+				printf("%c", (isprint(c) || c == ' ') ? c : 46);
 			} else
 			{
 				printf(" ");
