@@ -13,19 +13,18 @@
 */
 int main(void)
 {
-	int pass[PASS + 1];
+	int pass[PASS];
 	int i, a, x;
 
 	srand(time(NULL));
 
 	for (i = 0; i < PASS; i++)
 	{
-		x = rand() % INT_MAX;
+		x = rand() % RAND_MAX;
 		pass[i] = x;
 	}
-	pass[PASS] = '\0';
 
-	for (a = 0; a < PASS + 1; a++)
+	for (a = 0; a <= PASS; a++)
 	{
 		putchar(pass[a] + '0');
 	}
