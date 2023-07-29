@@ -28,8 +28,8 @@ void print_buffer(char *b, int size)
 		{
 			if (a + x < size)
 				printf("%02x", (unsigned char)b[a + x]);
-			/*else
-				printf("  ");*/
+			else
+				printf(" ");
 
 			if (x % 2 != 0)
 				printf(" ");
