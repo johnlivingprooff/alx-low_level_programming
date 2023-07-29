@@ -17,7 +17,6 @@ void print_buffer(char *b, int size)
 	if (size <= 0)
 	{
 		putchar(10);
-		return;
 	}
 
 	for (a = 0; a < size; a += 10)
@@ -31,7 +30,7 @@ void print_buffer(char *b, int size)
 			else
 				printf("  ");
 
-			if (x % 2 != 0)
+			if (x % 2)
 				printf(" ");
 		}
 
