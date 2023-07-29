@@ -40,7 +40,7 @@ void print_buffer(char *b, int size)
 			if (a + x < size)
 			{
 				c = b[a + x];
-				printf("%c", (isprint(c) && c != ' ') ? c : '.');
+				printf("%c", (isprint(c) || c == 32) ? c : 46);
 			} else
 			{
 				printf(" ");
