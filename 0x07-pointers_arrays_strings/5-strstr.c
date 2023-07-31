@@ -16,9 +16,10 @@ char *_strstr(char *haystack, char *needle)
 		n = needle;
 		for (; *n == *haystack; n++)
 		{
-				return (n);
+			return (n);
 		}
-		n++;
+		if (!*n)
+			n++;
 	}
 	return (NULL);
 }
