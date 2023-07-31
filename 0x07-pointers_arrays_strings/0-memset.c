@@ -3,9 +3,9 @@
 /**
 * _memset - function that fills memory with a constant byte.
 *
-* @s:
-* @b:
-* @n:
+* @s: array that will contain value of b
+* @b: Value to be copied
+* @n: Number of times it is copied
 *
 * Return: Char*
 */
