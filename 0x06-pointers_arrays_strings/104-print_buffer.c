@@ -11,7 +11,7 @@
 */
 void print_buffer(char *b, int size)
 {
-	int a, x;
+	size_t a, x;
 	char c;
 
 	if (size <= 0)
