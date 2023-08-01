@@ -3,7 +3,7 @@
 #include <limits.h>
 #include <time.h>
 
-#define PASS 10
+#define PASS 100
 
 /**
 * main - program that generates random
@@ -20,15 +20,18 @@ int main(void)
 
 	for (i = 0; i < PASS; i++)
 	{
-		x = rand() % RAND_MAX;
-		pass[i] = x;
-	}
+		pass[i] = rand() % 78;
+		a += (pass[i] + '0');
+		putchar(pass[i] + '0');
 
-	for (a = 0; a <= PASS; a++)
-	{
-		putchar(pass[a] + '0');
+		if ((2772 - a) - '0' < 78)
+		{
+			x = 2772 - a - '0';
+			a += x;
+			putchar(n + '0');
+			break;
+		}
 	}
 	
-	putchar(10);
 	return (0);
 }
