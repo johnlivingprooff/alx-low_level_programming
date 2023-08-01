@@ -9,9 +9,9 @@
 *
 * Return: void
 */
-void print_buffer(char *b, int size)
+void print_buffer(char *b, unsigned int size)
 {
-	size_t a, x;
+	unsigned int a, x;
 	char c;
 
 	if (size <= 0)
