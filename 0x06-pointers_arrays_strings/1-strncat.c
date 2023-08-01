@@ -5,7 +5,7 @@
 *
 * @dest: points to the address of the dest string in memory
 * @src: points to the address of the src string in memory
-* @n: number of characters to concatenate 
+* @n: number of characters to concatenate
 *
 * Return: char *
 */
