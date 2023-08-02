@@ -1,6 +1,7 @@
 #include "main.h"
 #include <math.h>
 
+
 int findPrime(int n, int div);
 /**
 * is_prime_number - function that returns 1
@@ -10,9 +11,7 @@ int findPrime(int n, int div);
 */
 int is_prime_number(int n)
 {
-	int max_div = sqrt(n);
-
-	return findPrime(n, max_div);
+	return (findPrime(n, n / 2));
 }
 
 /**
