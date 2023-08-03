@@ -9,14 +9,13 @@
 int main(void)
 {
     int r;
+		char first[100], second[100];
 
-    r = is_palindrome("level");
+		printf("Enter First string: ");
+		scanf("%s", first);
+		printf("Enter Second string: ");
+		scanf("%s", second);
+    r = wildcmp(first, second);
     printf("%d\n", r);
-    r = is_palindrome("redder");
-    printf("%d\n", r);
-    r = is_palindrome("test");
-    printf("%d\n", r);
-    r = is_palindrome("step on no pets");
-    printf("%d\n", r);
-    return (0);
+		return 0;
 }
