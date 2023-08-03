@@ -15,7 +15,7 @@ int _strlen_recursion(char *s)
 		n++;
 		return (n);
 	}
- 	return (0);
+	return (0);
 }
 
 int palindrome(char *s, int start, int end);
@@ -33,14 +33,14 @@ int is_palindrome(char *s)
 }
 
 /**
- * palindrome - Function that tells if a string is a palindrome or not.
- * @s: String to be tested.
- * @start: Index of the first character to check.
- * @end: Index of the last character to check.
- * Return: 1 if the string is a palindrome, 0 if not.
- */
- int palindrome(char *s, int start, int end)
- {
+* palindrome - Function that tells if a string is a palindrome or not.
+* @s: String to be tested.
+* @start: Index of the first character to check.
+* @end: Index of the last character to check.
+* Return: 1 if the string is a palindrome, 0 if not.
+*/
+int palindrome(char *s, int start, int end)
+{
 	if (start >= end)
 		return (1);
 
@@ -48,4 +48,4 @@ int is_palindrome(char *s)
 		return (0);
 
 	return (palindrome(s, start + 1, end - 1));
- }
+}
