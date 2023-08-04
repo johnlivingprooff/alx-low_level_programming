@@ -8,7 +8,7 @@
 */
 int main(int argc __attribute__((unused)), char *argv[])
 {
-	_puts(argv[0]);
+	myPuts(argv[0]);
 	return (0);
 }
 
@@ -16,7 +16,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 * _puts - that prints a string, followed by a new line
 * @s: contains the string to be printed.
 */
-void _puts(char *s)
+void myPuts(char *s)
 {
 	if (*s == '\0')
 	{
@@ -25,5 +25,5 @@ void _puts(char *s)
 	}
 
 	_putchar(*s); /* this prints the first char in s */
-	_puts(s + 1); /* recursion to iterate through s by +1 */
+	myPuts(s + 1); /* recursion to iterate through s by +1 */
 }
