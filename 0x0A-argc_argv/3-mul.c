@@ -45,5 +45,5 @@ if (s[i + 1] == ' ')
 break;
 }
 }
-return (n * sign);
+return (n *sign);
 }
