@@ -6,7 +6,7 @@
 * @argv: array of commands
 * Return: Always 0 (success)
 */
-int main(int argc, char *argv[])
+int main(char *argv[])
 {
 	_puts(argv[0]);
 	return (0);
@@ -18,12 +18,12 @@ int main(int argc, char *argv[])
 */
 void _puts(char *s)
 {
-        if (*s == '\0')
-        {
-                _putchar(10);
-                return;
-        }
+	if (*s == '\0')
+	{
+		_putchar(10);
+		return;
+	}
 
-        _putchar(*s); /* this prints the first char in s */
-        _puts(s + 1); /* recursion to iterate through s by +1 */
+	_putchar(*s); /* this prints the first char in s */
+	_puts(s + 1); /* recursion to iterate through s by +1 */
 }
