@@ -6,5 +6,6 @@
 /* prototypes for 0x0A-argc_argv */
 int _putchar(char c);
 void myPuts(char *s);
+int _atoi(char *s);
 
 #endif
