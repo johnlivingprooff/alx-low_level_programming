@@ -6,7 +6,7 @@
 * @argv: array of commands
 * Return: Always 0 (success)
 */
-int main(char *argv[])
+int main(int argc __attribute__((unused)), char *argv[])
 {
 	_puts(argv[0]);
 	return (0);
