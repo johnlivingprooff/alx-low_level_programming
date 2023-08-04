@@ -10,9 +10,9 @@ int main(int argc, char *argv[])
 {
 	int res;
 
-	if (argc == 2)
+	if (argc == 3)
 	{
-		res = _atoi(argv[0]) * _atoi(argv[1]);
+		res = _atoi(argv[1]) * _atoi(argv[2]);
 		printf("%d\n", res);
 	}
 
