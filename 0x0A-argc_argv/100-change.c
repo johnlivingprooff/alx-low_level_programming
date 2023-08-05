@@ -6,8 +6,8 @@
  * @argv: Array of arguments (arg vector).
  * Return: 0 - Success, 1 - Error.
  */
- int main(int argc, char *argv[])
- {
+int main(int argc, char *argv[])
+{
 	int cents = atoi(argv[1]);
 	int values[] = {25, 10, 5, 2, 1};
 	int i, coin = 0, val = 5;
@@ -32,4 +32,4 @@
 
 	printf("%d\n", coin);
 	return (0);
- }
+}
