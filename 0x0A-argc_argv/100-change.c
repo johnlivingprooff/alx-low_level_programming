@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int cents = atoi(argv[1]);
+	int cents;
 	int values[] = {25, 10, 5, 2, 1};
 	int i, coin = 0, val = 5;
 
@@ -17,6 +17,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+
+	cents = atoi(argv[1]);
 
 	if (cents < 0)
 	{
