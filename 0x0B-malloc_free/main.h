@@ -2,6 +2,7 @@
 #define MAIN_H
 
 #include <stdlib.h>
+#include <string.h>
 
 /* prototypes for this project */
 char *create_array(unsigned int size, char c);
