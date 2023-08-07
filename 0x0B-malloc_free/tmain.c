@@ -9,9 +9,12 @@
  */
 int main(void)
 {
-    char *s;
+    char *s, inp[99];
 
-    s = _strdup("ALX SE");
+		printf("Enter Input: ");
+		scanf("%s", inp);
+
+    s = _strdup(inp);
     if (s == NULL)
     {
         printf("failed to allocate memory\n");
