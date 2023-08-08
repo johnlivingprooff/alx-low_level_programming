@@ -15,10 +15,7 @@ char **strtow(char *str)
 	l = strlen(str);
 	array_of_words = (char **)malloc(sizeof(char *) * l);
 	if (array_of_words == NULL)
-	{
-		free(array_of_words);
 		return (NULL);
-	}
 	for (i = 0; i < l; i++)
 	{
 		if (str[i] != ' ')
@@ -44,6 +41,8 @@ char **strtow(char *str)
 		i += w_len;
 		}
 	}
+if (strcmp(str, " ") == 0)
+	return (NULL);
 array_of_words[l] =  NULL;
 return (array_of_words);
 }
