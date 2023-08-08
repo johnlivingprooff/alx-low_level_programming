@@ -10,7 +10,7 @@ char **strtow(char *str)
 	size_t i, j, l, w_len, w_strt = 0, index = 0;
 	char **array_of_words, *new_word;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || *str == ' ')
 		return (NULL);
 	l = strlen(str);
 	array_of_words = (char **)malloc(sizeof(char *) * (l + 1));
