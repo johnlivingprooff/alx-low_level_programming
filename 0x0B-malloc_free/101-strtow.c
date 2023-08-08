@@ -20,6 +20,7 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ')
 		{
+			w_strt = i;
 			w_len = 0;
 			for (; str[i + w_len] && str[i + w_len] != ' '; w_len++)
 				;
@@ -37,7 +38,6 @@ char **strtow(char *str)
 		new_word[w_len] = '\0';
 		array_of_words[index] = new_word;
 		index++;
-		w_strt = i + 1;
 		i += w_len;
 		}
 	}
