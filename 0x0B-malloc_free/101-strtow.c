@@ -13,7 +13,7 @@ char **strtow(char *str)
 	if (str == NULL || *str == '\0')
 		return (NULL);
 	l = strlen(str);
-	array_of_words = (char **)malloc(sizeof(char *) * (l + 1));
+	array_of_words = (char **)malloc(sizeof(char *) * l);
 	if (array_of_words == NULL)
 		return (NULL);
 	for (i = 0; i < l; i++)
