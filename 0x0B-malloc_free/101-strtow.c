@@ -25,8 +25,8 @@ char **strtow(char *str)
 		{
 			w_len = 0;
 
-			for (; str[i] && str[i] != ' '; i++)
-				w_len++;
+			for (; str[i + w_len] && str[i + w_len] != ' '; w_len++)
+				;
 
 			new_word = (char *)malloc(sizeof(char) * (w_len + 1));
 			if (new_word == NULL)
@@ -37,11 +37,15 @@ char **strtow(char *str)
 			free(array_of_words);
 			return (NULL);
 			}
-		strncpy(new_word, str + w_strt, w_len);
+		/* strncpy(new_word, str + w_strt, w_len); */
+		for (j = 0; j < w_len; j++)
+		 new_word[j] = str[w_strt + j];
+
 		new_word[w_len] = '\0';
 		array_of_words[index] = new_word;
 		index++;
 		w_strt = i + 1;
+		i += w_len;
 		}
 	}
 
