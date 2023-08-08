@@ -27,10 +27,10 @@ char **strtow(char *str)
 			new_word = (char *)malloc(sizeof(char) * w_len);
 			if (new_word == NULL)
 			{
-				for (j = 0; j < index; j++)
-					free(array_of_words[j]);
-			free(array_of_words);
-			return (NULL);
+				/* for (j = 0; j < index; j++) */
+				free(new_word);
+				free(array_of_words);
+				return (NULL);
 			}
 		/* strncpy(new_word, str + w_strt, w_len); */
 		for (j = 0; j < w_len; j++)
