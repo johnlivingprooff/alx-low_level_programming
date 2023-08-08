@@ -24,7 +24,7 @@ char **strtow(char *str)
 			w_len = 0;
 			for (; str[i + w_len] && str[i + w_len] != ' '; w_len++)
 				;
-			new_word = (char *)malloc(sizeof(char) * (w_len + 1));
+			new_word = (char *)malloc(sizeof(char) * w_len);
 			if (new_word == NULL)
 			{
 				for (j = 0; j < index; j++)
