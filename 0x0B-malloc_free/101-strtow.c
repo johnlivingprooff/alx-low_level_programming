@@ -10,7 +10,7 @@ char **strtow(char *str)
 	size_t i, j, l, w_len, w_strt = 0, index = 0;
 	char **array_of_words, *new_word;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || *str == '\0' || strcmp(str, " ") == 0)
 		return (NULL);
 	l = strlen(str);
 	array_of_words = (char **)malloc(sizeof(char *) * l);
@@ -41,8 +41,6 @@ char **strtow(char *str)
 		i += w_len;
 		}
 	}
-if (strcmp(str, " ") == 0)
-	return (NULL);
 array_of_words[l] =  NULL;
 return (array_of_words);
 }
