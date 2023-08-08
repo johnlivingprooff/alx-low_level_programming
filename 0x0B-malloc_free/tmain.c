@@ -34,5 +34,8 @@ int main(void)
         return (1);
     }
     print_tab(tab);
+		for (int i = 0; tab[i]; i++)
+			free(tab[i]);
+		free(tab);
     return (0);
 }

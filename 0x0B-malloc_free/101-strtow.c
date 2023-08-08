@@ -24,12 +24,15 @@ char **strtow(char *str)
 			w_len = 0;
 			for (; str[i + w_len] && str[i + w_len] != ' '; w_len++)
 				;
+			if (w_len == 0)
+				return (NULL);
 			new_word = (char *)malloc(sizeof(char) * w_len);
 			if (new_word == NULL)
 			{
-				/* for (j = 0; j < index; j++) */
-				free(new_word);
+				for (j = 0; j < i; j++)
+					free(array_of_words[j]);
 				free(array_of_words);
+				free(new_word);
 				return (NULL);
 			}
 		/* strncpy(new_word, str + w_strt, w_len); */
