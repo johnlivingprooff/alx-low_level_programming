@@ -8,6 +8,7 @@ char **strtow(char *str)
 {
 	size_t i, j, l = 0, w_strt = 0, index = 0, w_len = 0;
 	char **array_of_words;
+
 	if (str == NULL || *str == '\0')
 		return (NULL);
 	for (i = 0; str[i]; i++)
@@ -28,7 +29,7 @@ char **strtow(char *str)
 			w_strt = i;
 			for (; str[i] && str[i] != ' '; w_len++, i++)
 				;
-			array_of_words[index] = malloc(sizeof(char) * (w_len));
+			array_of_words[index] = malloc(sizeof(char) * (w_len + 1));
 			if (array_of_words[index] == NULL)
 			{
 				for (j = 0; j < index + 1; j++)
