@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
 * strtow - function that splits a string into words.
 * @str: string to be split by spaces
@@ -6,13 +7,14 @@
 */
 char **strtow(char *str)
 {
-	size_t i, j, l = 0, w_strt = 0, index = 0, w_len = 0;
+	size_t i, j, l = 0, index = 0, w_len = 0, w_strt;
 	char **array_of_words;
+
 	if (str == NULL || *str == '\0')
 		return (NULL);
 	for (i = 0; str[i]; i++)
 	{
-		if (str[i] != ' ' && (str[i - 1] == ' ' || i == 0))
+		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 			l++; /* calculates no. of words */
 	}
 	if (l == 0)
@@ -20,18 +22,18 @@ char **strtow(char *str)
 	array_of_words = malloc(sizeof(char *) * (l + 1));
 	if (array_of_words == NULL)
 		return (NULL);
-	for (i = 0; str[i]; i++)
+	for (i = 0, w_strt = 0; str[i]; i++)
 	{
 		if (str[i] != ' ')
 		{
 			w_len = 0;
 			w_strt = i;
-			for (; str[i] && str[i] != ' '; w_len++, i++)
+			for (; str[i] && str[i] != ' '; w_len++, i++) /*count char in word*/
 				;
-			array_of_words[index] = malloc(sizeof(char) * (w_len));
+			array_of_words[index] = malloc(sizeof(char) * (w_len + 1));
 			if (array_of_words[index] == NULL)
 			{
-				for (j = 0; j < index + 1; j++)
+				for (j = 0; j < index; j++)
 					free(array_of_words[j]);
 				free(array_of_words);
 				return (NULL);
@@ -42,6 +44,6 @@ char **strtow(char *str)
 			index++;
 		}
 	}
-	array_of_words[l] =  NULL;
+	array_of_words[index] =  NULL;
 	return (array_of_words);
 }
