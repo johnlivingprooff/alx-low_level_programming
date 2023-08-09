@@ -14,7 +14,7 @@ char **strtow(char *str)
 		return (NULL);
 	for (i = 0; str[i]; i++)
 	{
-		if (str[i] != ' ' && (str[i - 1] == ' ' || i == 0))
+		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 			l++; /* calculates no. of words */
 	}
 	if (l == 0)
