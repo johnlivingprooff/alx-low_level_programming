@@ -30,7 +30,7 @@ char **strtow(char *str)
 			w_strt = i;
 			for (; str[i] && str[i] != ' '; w_len++, i++) /*count char in word*/
 				;
-			array_of_words[index] = malloc(sizeof(char) * (w_len));
+			array_of_words[index] = malloc(sizeof(char) * (w_len + 1));
 			if (array_of_words[index] == NULL)
 			{
 				for (j = 0; j < index; j++)
