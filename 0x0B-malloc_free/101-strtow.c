@@ -7,16 +7,19 @@
 */
 char **strtow(char *str)
 {
-	size_t i, j, l, w_len, w_strt = 0, index = 0;
+	size_t i, j, l = 0, w_len, w_strt = 0, index = 0;
 	char **array_of_words, *new_word;
 
-	if (str == NULL || *str == '\0' || strcmp(str, " ") == 0)
+	if (str == NULL || *str == '\0')
 		return (NULL);
-	l = strlen(str);
-	array_of_words = (char **)malloc(sizeof(char *) * l);
-	if (array_of_words == NULL)
-		return (NULL);
-	for (i = 0; i < l; i++)
+
+	for (i = 0; str[i]; i++)
+	{
+		if (str[i] != ' ' && (str[i - 1] == ' ' || i == 0))
+			l++; // calculates no. of words
+	}
+	array_of_words = malloc(sizeof(char *) * (l + 1));
+	for (i = 0; str[i]; i++)
 	{
 		if (str[i] != ' ')
 		{
@@ -26,7 +29,7 @@ char **strtow(char *str)
 				;
 			if (w_len == 0)
 				return (NULL);
-			new_word = (char *)malloc(sizeof(char) * w_len);
+			new_word = malloc(sizeof(char) * (w_len + 1));
 			if (new_word == NULL)
 			{
 				for (j = 0; j < i; j++)
@@ -44,6 +47,6 @@ char **strtow(char *str)
 		i += w_len;
 		}
 	}
-array_of_words[l] =  NULL;
+array_of_words[l + 1] =  NULL;
 return (array_of_words);
 }
