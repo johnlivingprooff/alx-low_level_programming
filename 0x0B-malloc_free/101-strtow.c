@@ -18,7 +18,7 @@ char **strtow(char *str)
 	}
 	if (l == 0)
 		return (NULL);
-	array_of_words = malloc(sizeof(char *) * l);
+	array_of_words = malloc(sizeof(char *) * (l + 1));
 	if (array_of_words == NULL)
 		return (NULL);
 	for (i = 0; str[i]; i++)
@@ -32,7 +32,7 @@ char **strtow(char *str)
 			array_of_words[index] = malloc(sizeof(char) * w_len);
 			if (array_of_words[index] == NULL)
 			{
-				for (j = 0; j < index + 1; j++)
+				for (j = 0; j < index; j++)
 					free(array_of_words[j]);
 				free(array_of_words);
 				return (NULL);
