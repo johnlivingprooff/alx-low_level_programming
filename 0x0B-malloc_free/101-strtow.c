@@ -27,7 +27,7 @@ char **strtow(char *str)
 		{
 			w_len = 0;
 			w_strt = i;
-			for (; str[i] && str[i] != ' '; w_len++, i++)
+			for (; str[w_strt] && str[i] != ' '; w_len++, i++)
 				;
 			array_of_words[index] = malloc(sizeof(char) * w_len);
 			if (array_of_words[index] == NULL)
