@@ -21,10 +21,7 @@ char **strtow(char *str)
 		return (NULL);
 	array_of_words = malloc(sizeof(char *) * (l + 1));
 	if (array_of_words == NULL)
-		{
-			free(array_of_words);
 			return (NULL);
-		}
 	for (i = 0; str[i]; i++)
 	{
 		if (str[i] != ' ')
