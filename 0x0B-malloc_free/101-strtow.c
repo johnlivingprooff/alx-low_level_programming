@@ -36,6 +36,7 @@ char **strtow(char *str)
 				for (j = 0; j < index; j++)
 					free(array_of_words[j]);
 				free(array_of_words);
+				free(new_word);
 				return (NULL);
 			}
 			for (j = 0; j < c_total; j++)
