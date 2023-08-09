@@ -45,6 +45,6 @@ char **strtow(char *str)
 			index++;
 		}
 	}
-	array_of_words[l + 1] =  NULL;
+	array_of_words[l] =  NULL;
 	return (array_of_words);
 }
