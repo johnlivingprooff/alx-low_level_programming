@@ -49,7 +49,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	/*fills new string with n bytes of s2*/
 	for (j = 0; j < n; j++, i++)
-			new_str[i] = s2[j]; /*here's where the exchange is made*/
+		new_str[i] = s2[j]; /*here's where the exchange is made*/
 
 	new_str[i] = '\0'; /*add null terminator*/
 	return (new_str);
