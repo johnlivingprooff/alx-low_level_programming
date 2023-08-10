@@ -27,26 +27,30 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	size_t i, j, s1_len, s2_len;
 	char *new_str;
 
+	if (s1 == NULL)
+		s1 = ""; /*treat NULL as an empty string*/
+
+	if (s2 == NULL)
+		s2 = ""; /*treat NULL as an empty string*/
+
 	s1_len = _strlen(s1); /*counts no. of strings in s1*/
 	s2_len = _strlen(s2); /*counts no. of strings in s2*/
+
+	/*change n if it's greater than or equal to */
+	n = (n >= s2_len) ? s2_len : n;
 
 	new_str = malloc(s1_len + n + 1);
 	if (new_str == NULL)
 		return (NULL); /* if malloc fails */
+
+	/*fills new string with char in s1*/
 	for (i = 0; s1[i] != 0; i++)
-	{
-		new_str[i] = s1[i]; /*fills new string with char in s1*/
-	}
-	if (n >= s2_len)
-	{
-		for (j = 0; s2[j] != 0; j++, i++)
-			new_str[i] = s2[j]; /*fills new string with char in s2*/
-	}
-	else
-	{
-		for (j = 0; j <= n; j++, i++)
-			new_str[i] = s2[j]; /*fills chars up to n bytes*/
-	}
+		new_str[i] = s1[i]; /*here's where the exchange is made*/
+
+	/*fills new string with n bytes of s2*/
+	for (j = 0; j < n; j++, i++)
+			new_str[i] = s2[j]; /*here's where the exchange is made*/
+
 	new_str[i] = '\0'; /*add null terminator*/
 	return (new_str);
 }
