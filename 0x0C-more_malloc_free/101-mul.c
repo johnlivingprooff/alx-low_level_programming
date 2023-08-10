@@ -1,4 +1,5 @@
 #include "main.h"
+#define INVALID -999999999
 
 /**
 * _atoi - Function converts a string to an integer
@@ -12,11 +13,18 @@ int _atoi(char *s)
 
 	for (i = 0; s[i] != '\0'; ++i)
 	{
-		if ((s[i] >= 33 && s[i] <= 47) || (s[i] >= 58))
-			return (-1);
+		if ((s[i] >= 33 && s[i] <= 44) || (s[i] >= 46 && s[i] <= 47) || (s[i] >= 58))
+			return (INVALID);
 
-		if (s[i] == '-')
-			sign *= -1; /* sign = sign * -1 */
+		if (i > 0 && s[i] == '-')
+			return (INVALID);
+
+		if (i == 0 && s[i] == '-')
+		{
+			/* keeps the - at the start of s */
+			if (i == 0 && (s[i + 1] >= '0' && s[i + 1] <= '9'))
+				sign *= -1;
+		}
 
 		else if (s[i] >= 48 && s[i] <= 57) /* 0 <= x >=9 i.e x is between 0 - 9 */
 		{
@@ -47,7 +55,8 @@ int main(int argc, char **argv)
 	num1 = _atoi(argv[1]);
 	num2 = _atoi(argv[2]);
 
-	if (num1 == -1 || num2 == -1)
+	/*printf("num1: %d, num2: %d\n", num1, num2);*/
+	if (num1 == INVALID || num2 == INVALID)
 	{
 		printf("Error\n");
 		exit(98);
