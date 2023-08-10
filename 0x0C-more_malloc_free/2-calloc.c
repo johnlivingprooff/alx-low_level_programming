@@ -23,7 +23,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	/*assign zeros to allocated memory*/
 	for (i = 0; i < t_size; i++)
-		arr[i] = '0';
+		arr[i] = 0;
 
 	return (arr);
 }
