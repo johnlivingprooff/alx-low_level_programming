@@ -16,7 +16,7 @@ int _atoi(char *s)
 
 
 		if (s[i] == '-')
-				sign *= -1; /* keeps the - at the start of s */
+			sign *= -1; /* keeps the - at the start of s */
 
 		else if (s[i] >= 48 && s[i] <= 57) /* 0 <= x >=9 i.e x is between 0 - 9 */
 		{
