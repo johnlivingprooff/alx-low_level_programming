@@ -46,7 +46,7 @@ int main(int argc, char **argv)
 	num1 = _atoi(argv[1]);
 	num2 = _atoi(argv[2]);
 
-	printf("num1: %d, num2: %d\n", num1, num2);
+	/*printf("num1: %d, num2: %d\n", num1, num2);*/
 	if (num1 == INVALID || num2 == INVALID)
 	{
 		printf("Error\n");
