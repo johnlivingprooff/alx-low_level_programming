@@ -1,5 +1,5 @@
 #include "main.h"
-#define INVALID -999999999
+#define INVALID INT_MIN
 
 /**
 * _atoi - Function converts a string to an integer
