@@ -35,7 +35,7 @@ int _atoi(char *s)
 */
 int main(int argc, char **argv)
 {
-	unsigned int mul, num1, num2;
+	int mul, num1, num2;
 
 	if (argc != 3)
 	{
