@@ -1,5 +1,5 @@
 #include "main.h"
-#define INVALID INT_MIN
+#define INVALID -999999999
 
 /**
 * _atoi - Function converts a string to an integer
@@ -23,8 +23,6 @@ int _atoi(char *s)
 			if (s[i + 1] == ' ')
 				break;
 		}
-		else
-			return (INVALID);
 	}
 	return (n * sign);
 }
@@ -37,7 +35,7 @@ int _atoi(char *s)
 */
 int main(int argc, char **argv)
 {
-	long int mul, num1, num2;
+	unsigned int mul, num1, num2;
 
 	if (argc != 3)
 	{
@@ -48,7 +46,7 @@ int main(int argc, char **argv)
 	num1 = _atoi(argv[1]);
 	num2 = _atoi(argv[2]);
 
-	/*printf("num1: %d, num2: %d\n", num1, num2);*/
+	printf("num1: %d, num2: %d\n", num1, num2);
 	if (num1 == INVALID || num2 == INVALID)
 	{
 		printf("Error\n");
@@ -56,6 +54,6 @@ int main(int argc, char **argv)
 	}
 
 	mul = num1 * num2;
-	printf("%ld\n", mul);
+	printf("%d\n", mul);
 	return (0);
 }
