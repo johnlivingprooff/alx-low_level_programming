@@ -23,6 +23,8 @@ int _atoi(char *s)
 			if (s[i + 1] == ' ')
 				break;
 		}
+		else
+			return (INVALID);
 	}
 	return (n * sign);
 }
