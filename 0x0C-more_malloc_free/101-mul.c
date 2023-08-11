@@ -9,7 +9,7 @@
 int _atoi(char *s)
 {
 	int i, sign = 1; /* i represents the element number of the *s array: */
-	long long int n = 0;
+	int64_t n = 0;
 
 	for (i = 0; s[i] != '\0'; ++i)
 	{
@@ -44,7 +44,7 @@ int _atoi(char *s)
 */
 int main(int argc, char **argv)
 {
-	long long int mul, num1, num2;
+	int64_t mul, num1, num2;
 
 	if (argc != 3)
 	{
@@ -63,6 +63,6 @@ int main(int argc, char **argv)
 	}
 
 	mul = num1 * num2;
-	printf("%lld\n", mul);
+	printf("%ld\n", mul);
 	return (0);
 }
