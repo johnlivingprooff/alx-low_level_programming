@@ -4,6 +4,8 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
+#include <stdint.h>
 
 /* Function prototypes for 0x0C-more_malloc_free */
 void *malloc_checked(unsigned int b);

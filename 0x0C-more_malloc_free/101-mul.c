@@ -1,5 +1,5 @@
 #include "main.h"
-#define INVALID -999999999
+#define INVALID INT_MIN
 
 /**
 * _atoi - Function converts a string to an integer
@@ -9,7 +9,7 @@
 int _atoi(char *s)
 {
 	int i, sign = 1; /* i represents the element number of the *s array: */
-	unsigned int n = 0;
+	long long int n = 0;
 
 	for (i = 0; s[i] != '\0'; ++i)
 	{
@@ -44,7 +44,7 @@ int _atoi(char *s)
 */
 int main(int argc, char **argv)
 {
-	int mul, num1, num2;
+	long long int mul, num1, num2;
 
 	if (argc != 3)
 	{
@@ -63,6 +63,6 @@ int main(int argc, char **argv)
 	}
 
 	mul = num1 * num2;
-	printf("%d\n", mul);
+	printf("%lld\n", mul);
 	return (0);
 }
