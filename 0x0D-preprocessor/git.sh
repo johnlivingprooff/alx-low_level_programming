@@ -3,7 +3,7 @@
 # collect commit message
 read -p 'commit msg: ' msg
 
-# git cmds
+# git cmds start here
 git add .
 
 git commit \-m "$msg"
