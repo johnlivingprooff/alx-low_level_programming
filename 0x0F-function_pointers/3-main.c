@@ -10,8 +10,7 @@ int main(int argc, char **argv)
 {
 	int calc, num1, num2;
 
-	if (argc != 4 || (argv[1] == NULL || argv[2] == NULL ||
-				argv[3] == NULL) || strlen(argv[2]) > 1)
+	if (argc != 4 || strlen(argv[2]) > 1)
 	{
 		printf("Error\n");
 		exit(98);
