@@ -8,7 +8,7 @@
  */
 int main(int argc, char **argv)
 {
-	int calc, num1, num2;
+	int num1, num2;
 
 	if (argc != 4 || strlen(argv[2]) > 1)
 	{
@@ -31,8 +31,8 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 
-	calc = get_op_func(argv[2])(num1, num2);
+	/*calc = get_op_func(argv[2])(num1, num2);*/
 
-	printf("%d\n", calc);
+	printf("%d\n", get_op_func(argv[2])(num1, num2));
 	return (0);
 }
