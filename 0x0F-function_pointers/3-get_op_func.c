@@ -26,3 +26,16 @@ op_t ops[] = {
 	}
 	return (NULL);
 }
+
+/**
+ * operato - checks for backslash
+ * @s: contains operator
+ * Return: boolean value
+ *
+*bool operato(char *s)
+*{
+*	return (strcmp(s, "\\+") == 0 || strcmp(s, "\\-") == 0 ||
+*			strcmp(s, "\\*") == 0 || strcmp(s, "\\/") == 0 ||
+*			strcmp(s, "\\%") == 0);
+*}
+*/

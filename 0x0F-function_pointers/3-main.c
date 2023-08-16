@@ -10,6 +10,7 @@ int main(int argc, char **argv)
 {
 	char *operator;
 	int calc, num1, num2;
+	int (*calculation)(int, int);
 
 	if (argc != 4 || (argv[1] == NULL || argv[2] == NULL || argv[3] == NULL))
 	{
@@ -27,13 +28,15 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 
-	calc = (*get_op_func(operator))(num1, num2);
+	calculation = get_op_func(operator);
 
-	if (!calc)
+	if (calculation == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
+
+	calc = calculation(num1, num2);
 
 	printf("%d\n", calc);
 	return (0);
