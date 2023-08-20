@@ -2,7 +2,6 @@
 #define VARD_FUNC_C
 
 #include <stdarg.h>
-#include <stdlib.h>
 #include <stdio.h>
 
 /* printer structure */
