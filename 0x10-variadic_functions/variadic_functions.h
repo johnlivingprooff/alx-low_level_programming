@@ -5,6 +5,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/* printer structure */
+typedef struct printer
+{
+	const char *specifier;
+	void (*print)(va_list args);
+} prints_format;
+
 /* prototypes for this function */
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);

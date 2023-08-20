@@ -1,6 +1,55 @@
 #include "variadic_functions.h"
 
 /**
+ * print_char - prints a character
+ * @args: argument to be printed
+ */
+void print_char(va_list args)
+{
+	char c;
+
+	c = (char)va_arg(args, int);
+	printf("%c", c);
+}
+
+/**
+ * print_int - prints an integer
+ * @args: argument to be printed
+ */
+void print_int(va_list args)
+{
+	int n = va_arg(args, int);
+
+	printf("%d", n);
+}
+
+/**
+ * print_float - prints a number with decimal
+ * points, e.g: 5.86
+ * @args: argument to be printed
+ */
+void print_float(va_list args)
+{
+	float f = (float)va_arg(args, double);
+
+	printf("%f", f);
+}
+
+/**
+ * print_string - prints a string
+ * @args: argument to be printed
+ */
+void print_string(va_list args)
+{
+	char *s = va_arg(args, char *);
+
+	if (s == NULL)
+		printf("(nil)");
+	else
+		printf("%s", s);
+}
+
+/**
  * print_all - function prints anything
  * @format: hols all the formats to print
  * does not return
@@ -8,43 +57,33 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	char c, *s;
-	int i, index = 0, prints = 0;
-	float f;
+	prints_format print_it[] = {
+		{"c", print_char},
+		{"i", print_int},
+		{"f", print_float},
+		{"s", print_string}
+	};
+
+	int i = 0, j;
+	char *sepr = ", ";
 
 	va_start(args, format);
-	while (format[index] != '\0')
+	while (format[i] != '\0')
 	{
-		switch (format[index])
-		{case 'c':
-				c = (char)va_arg(args, int);
-				printf("%c, ", c);
-				prints = 1;
+		j = 0;
+		while (j < 4)
+		{
+			if (format[i] == *(print_it[j].specifier))
+			{
+				print_it[j].print(args);
+				if (format[i + 1] != '\0')
+					printf("%s", sepr);
 				break;
-			case 'i':
-				i = va_arg(args, int);
-				printf("%d, ", i);
-				prints = 1;
-				break;
-			case 'f':
-				f = va_arg(args, double);
-				printf("%f, ", f);
-				prints = 1;
-				break;
-			case 's':
-				s = va_arg(args, char *);
-				if (s == NULL)
-					printf("(nil)");
-				else
-					printf("%s, ", s);
-				prints = 1;
-				break;
-			default:
-				break;
+			}
+			j++;
 		}
-		index++;
+		i++;
 	}
 	va_end(args);
-	if (prints)
-		putchar(10);
+	putchar(10);
 }
