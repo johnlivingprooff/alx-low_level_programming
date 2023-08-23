@@ -58,10 +58,10 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	prints_format print_it[] = {
-		{"c", print_char},
-		{"i", print_int},
-		{"f", print_float},
-		{"s", print_string}
+		{'c', print_char},
+		{'i', print_int},
+		{'f', print_float},
+		{'s', print_string}
 	};
 
 	int i = 0, j;
@@ -73,10 +73,10 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (j < 4)
 		{
-			if (format[i] == *(print_it[j].specifier))
+			if (format[i] == print_it[j].specifier)
 			{
 				print_it[j].print(args);
-				if (format[i + 1] != '\0')
+				if (format[i] == print_it[j].specifier)
 					printf("%s", sepr);
 				break;
 			}

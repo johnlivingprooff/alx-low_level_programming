@@ -7,7 +7,7 @@
 /* printer structure */
 typedef struct printer
 {
-	const char *specifier;
+	const char specifier;
 	void (*print)(va_list args);
 } prints_format;
 
