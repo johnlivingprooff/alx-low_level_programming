@@ -68,7 +68,7 @@ void print_all(const char * const format, ...)
 	char *sepr = ", ";
 
 	va_start(args, format);
-	while (format[i] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
 		while (j < 4)
@@ -76,7 +76,7 @@ void print_all(const char * const format, ...)
 			if (format[i] == print_it[j].specifier)
 			{
 				print_it[j].print(args);
-				if (format[i] == print_it[j].specifier)
+				if (format[i + 1] != '\0')
 					printf("%s", sepr);
 				break;
 			}
@@ -84,6 +84,6 @@ void print_all(const char * const format, ...)
 		}
 		i++;
 	}
-	va_end(args);
 	putchar(10);
+	va_end(args);
 }
