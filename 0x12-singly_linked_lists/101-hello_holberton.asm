@@ -1,5 +1,3 @@
-	.file	"hello-world.c"
-	.text
 	.section	.rodata
 .LC0:
 	.string	"Hello, Holberton"
