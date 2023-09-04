@@ -19,18 +19,26 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filep == -1)
 		return (0);
 
+	if (buf == NULL)
+	{
+		close(filep);
+		return (0);
+	}
 	r_val = read(filep, buf, letters);
 	if (r_val < 0)
 	{
 		close(filep);
+		free(buf);
 		return (0);
 	}
 
 	if (write(1, buf, r_val) == -1)
 	{
 		close(filep);
+		free(buf);
 		return (0);
 	}
 	close(filep);
+	free(buf);
 	return (r_val);
 }
