@@ -13,22 +13,24 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int filep;
 	char *buf = malloc(letters);
 
+	if (filename == NULL)
+		return (0);
 	filep = open(filename, 0);
 	if (filep == -1)
-	{
-		perror("open");
 		return (0);
-	}
 
 	r_val = read(filep, buf, letters);
 	if (r_val < 0)
 	{
-		perror("read");
 		close(filep);
 		return (0);
 	}
 
-	write(1, buf, r_val);
+	if (write(1, buf, r_val) == -1)
+	{
+		close(filep);
+		return (0);
+	}
 	close(filep);
 	return (r_val);
 }
