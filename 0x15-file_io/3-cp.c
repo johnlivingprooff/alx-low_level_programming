@@ -9,13 +9,12 @@
  */
 int main(int ac, char **av)
 {
-	char *buffer = malloc(BUFFER_S);
-	char *file_from, *file_to;
+	char *buffer = malloc(BUFFER_S), *file_from, *file_to;
+	ssize_t r_val;
 	int ffrom, fto;
 
 	if (ac != 3)
-	{
-		dprintf(2, "Usage: %s file_from file_to\n", av[0]);
+	{	dprintf(2, "Usage: %s file_from file_to\n", av[0]);
 		exit(97);
 	}
 	file_from = av[1];
@@ -27,13 +26,16 @@ int main(int ac, char **av)
 		close(ffrom);
 		exit(98);
 	}
-	fto = open(file_to, O_WRONLY | O_CREAT, 0664);
-	if (fto == -1 || (write(fto, buffer, BUFFER_S) == -1))
+	fto = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	while ((r_val = read(ffrom, buffer, BUFFER_S)) > 0)
 	{
-		dprintf(2, "Error: Can't write to %s\n", av[2]);
-		close(ffrom);
-		close(fto);
-		exit(99);
+		if (fto == -1 || (write(fto, buffer, r_val) == -1))
+		{
+			dprintf(2, "Error: Can't write to %s\n", av[2]);
+			close(ffrom);
+			close(fto);
+			exit(99);
+		}
 	}
 	if (close(ffrom) == -1)
 	{
