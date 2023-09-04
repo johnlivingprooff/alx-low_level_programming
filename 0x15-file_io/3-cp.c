@@ -10,7 +10,7 @@ int main(int ac, char **av)
 {
 	char *buffer = malloc(1024);
 	char *file_from, *file_to;
-	int ff, ft;
+	int fd;
 
 	if (ac != 3)
 	{
@@ -21,28 +21,28 @@ int main(int ac, char **av)
 	file_from = av[1];
 	file_to = av[2];
 
-	ff = open(file_from, O_RDONLY);
-	if (ff == -1 || (read(ff, buffer, 1024) == -1))
+	fd = open(file_from, O_RDONLY);
+	if (fd == -1 || (read(fd, buffer, 1024) == -1))
 	{
 		dprintf(2, "Error: Can't read to %s\n", av[1]);
-		close(ff);
+		close(fd);
 		exit(98);
 	}
 
-	ft = open(file_to, O_WRONLY | O_CREAT, 0664);
-	if (ft == -1 || (write(ft, buffer, 1024) == -1))
+	fd = open(file_to, O_WRONLY | O_CREAT, 0664);
+	if (fd == -1 || (write(fd, buffer, 1024) == -1))
 	{
 		dprintf(2, "Error: Can't write to %s\n", av[2]);
-		close(ft);
+		close(fd);
 		exit(99);
 	}
 
-	if (close(ff) == -1)
+	if (close(fd) == -1)
 	{
-		dprintf(2, "Error: Can't close fd %i", ff);
+		dprintf(2, "Error: Can't close fd %i", fd);
 		exit(100);
 	}
 
-	close(ft);
+	close(fd);
 	return (0);
 }
