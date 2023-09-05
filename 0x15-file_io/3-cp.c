@@ -16,7 +16,7 @@ void helper(const char *file_from, char *file_to, char *buffer)
 	ffrom = open(file_from, O_RDONLY);
 	if (ffrom == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", file_from);
+		dprintf(1, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 
