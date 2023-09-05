@@ -63,7 +63,8 @@ int main(int ac, char **av)
 	char *buffer = malloc(BUFFER_S), *file_from, *file_to;
 
 	if (ac != 3)
-	{	dprintf(2, "Usage: %s file_from file_to\n", av[0]);
+	{
+		dprintf(2, "Usage: %s file_from file_to\n", "cp");
 		exit(97);
 	}
 	file_from = av[1];
