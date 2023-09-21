@@ -91,8 +91,8 @@ void print_elfFile(elf_header *elfHeader)
 			elfHeader->e_ident[8]);
 	printf("  Type:                              %s\n",
 			ELFtype(elfHeader->e_type));
-	printf("  Entry point address:               0x%lx\n",
-			(unsigned long)elfHeader->e_entry);
+	printf("  Entry point address:               0x%08x\n",
+			(uint32_t)elfHeader->e_entry);
 
 }
 
