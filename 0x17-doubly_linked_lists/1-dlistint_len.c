@@ -15,7 +15,7 @@ size_t dlistint_len(const dlistint_t *h)
 	/* traverse backwards to the beginning */
 	while (h->prev != NULL)
 		h = h->prev;
-
+	/* count number of elements */
 	while (h != NULL)
 	{
 		h = h->next;
