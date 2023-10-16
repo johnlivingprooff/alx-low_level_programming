@@ -2,13 +2,11 @@
 #include <stdio.h>
 
 /*
+ * main - Entry point
  *
- * main Function - Entry
+ * Description: prints putchar followed by a new line
  *
- * Description: program that prints _putchar
- * followed by a new line.
- *
- * returns 0
+ * Returns: Always 0 (Success)
  */int main(void)
 {
 	char result[8];
