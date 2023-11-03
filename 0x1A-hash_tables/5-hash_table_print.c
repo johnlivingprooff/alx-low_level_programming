@@ -20,6 +20,8 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			if (i > 0)
 				printf(", ");
+			if (node->value == NULL)
+				printf("'%s': 'NULL'", node->key);
 			printf("'%s': '%s'", node->key, node->value);
 			i++;
 			node = node->next;
