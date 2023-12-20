@@ -11,7 +11,7 @@ clean:
 	$(RM) *~ school
 
 oclean:
-	$(RM) main.c school.c
+	$(RM) main.o school.o
 
 fclean: clean oclean
 
