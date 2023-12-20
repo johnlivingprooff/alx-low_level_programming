@@ -4,7 +4,7 @@ OBJ = main.o school.o
 NAME = school
 RM = rm -f
 
-$(NAME): main.o school.o
+$(NAME): $(OBJ)
 	$(CC) $^ -o $@
 
 main.o: main.c
