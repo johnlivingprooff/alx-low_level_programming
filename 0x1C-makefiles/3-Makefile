@@ -1,25 +1,17 @@
 CC = gcc
 SRC = main.c school.c
-OBJ = main.o school.o
+OBJ = $(SRC: .c=.o)
 NAME = school
 RM = rm -f
 
-$(NAME): $(OBJ)
-	$(CC) $^ -o $@
-
-main.o: main.c
-	$(CC) -c $< -o $@
-
-school.o: school.c
-	$(CC) -c $< -o $@
-
-all: $(NAME)
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) *~ school
 
 oclean:
-	$(RM) $(OBJ)
+	$(RM) main.c school.c
 
 fclean: clean oclean
 
