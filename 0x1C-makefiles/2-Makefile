@@ -7,6 +7,7 @@ $(NAME): main.o school.o
 	$(CC) $(OBJ) -o $@
 
 all: $(NAME)
+	$(CC) $(SRC) -o $(NAME)
 
 main.o: main.c
 	$(CC) -c $< -o $@
