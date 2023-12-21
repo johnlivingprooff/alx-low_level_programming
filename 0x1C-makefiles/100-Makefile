@@ -4,11 +4,11 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 
-header:
-	@test -e m.h
-
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
+
+header:
+	@test -e m.h
 
 clean:
 	$(RM) *~ $(NAME)
