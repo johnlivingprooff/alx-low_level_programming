@@ -7,9 +7,6 @@ NAME = school
 all: $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
 
-header:
-	@test -e m.h
-
 clean:
 	$(RM) *~ $(NAME)
 
